@@ -1,13 +1,14 @@
-try {
+/*try {
   Typekit.load();
-} catch (e) {}
+} catch (e) {} */
 
 /*$(document).on("click", function() {
   document.documentElement.webkitRequestFullscreen();
 })*/
 
 $(document).on("ready", function() {
-  if (typeof localStorage.name == "string") {
+  console.log('this is the preview string => '+localStorage.getItem("previewString"));
+  if (localStorage.getItem("previewString") !== null)  {
     $("body").addClass(localStorage.getItem("previewString"));
   }
   var textElements = [
