@@ -21,6 +21,7 @@ $(document).on("ready", function() {
     "tName",
     "tHandle",
     "twitterContent",
+    "infoBarTwitter",
     "nameLeftName",
     "nameLeftHandle",
     "nameRightName",
