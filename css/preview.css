@@ -302,7 +302,8 @@ text-transform: initial;
 
 #banner,
 #comingUp,
-#nameLeft {
+#nameLeft
+ {
   max-width: 50%;
   bottom: 8vh;
   left: 10vh;
