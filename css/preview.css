@@ -302,8 +302,13 @@ text-transform: initial;
 
 #banner,
 #comingUp,
-#tCard,
 #nameLeft {
+  max-width: 50%;
+  bottom: 8vh;
+  left: 10vh;
+  position: absolute;
+}
+#tCard {
   max-width: 40%;
   bottom: 8vh;
   left: 10vh;
@@ -610,7 +615,7 @@ text-transform: initial;
   height: 0vh;
   width: 100vw;
   background-size: cover;
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/199072/HaloBg2.jpg");
+  background-image: url("../img/HaloBg2.jpg");
   -webkit-transition: all .8s cubic-bezier(0.560, 0.205, 0.355, 1.000);
           transition: all .8s cubic-bezier(0.560, 0.205, 0.355, 1.000);
   -webkit-transform-origin: 100% 100%;
@@ -718,7 +723,7 @@ Animations! =====*/
 .fullSocial-on #fullBGCard .cardContent{
   -webkit-transition-delay:2.4s;
           transition-delay:2.4s;
-  max-height:300px;
+  max-height:350px;
 }
 .fullSocial-off #fullBGCard .cardContent{
   max-height:0px;
@@ -774,35 +779,35 @@ Animations! =====*/
 
 /*Circle Icons for shit =========*/
 .circle .twitter {
-  content:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/199072/Icon-Twitter-White.png");
+  content:url("../img/Icon-Twitter-White.png");
 }
 .circle .facebook {
-  content:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/199072/Icon-Facebook-White.png");
+  content:url("../img/Icon-Facebook-White.png");
 }
 .circle .grid {
-  content:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/199072/Icon-Grid-White.png");
+  content:url("../img/Icon-Grid-White.png");
 }
 .circle .mushroom {
-  content:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/199072/Icon-Mushroom-White.png");
+  content:url("../img/Icon-Mushroom-White.png");
 }
 .circle .ex {
-  content:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/199072/Icon-ex-White.png");
+  content:url("../img/Icon-ex-White.png");
 }
 .circle .arrow {
-  content:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/199072/Icon-Arrow-White.png");
+  content:url("../img/Icon-Arrow-White.png");
 }
 .circle .xbox {
-  content:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/199072/Icon-Xbox-White.png");
+  content:url("../img/Icon-Xbox-White.png");
 }
 .circle .playstation {
-  content:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/199072/Icon-Playstation-White.png");
+  content:url("../img/Icon-Playstation-White.png");
 }
 .circle .triforce {
-  content:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/199072/Icon-Triforce-White.png");
+  content:url("../img/Icon-Triforce-White.png");
 }
 .circle .ign {
-  content:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/199072/Icon-IGN-White.png");
+  content:url("../img/Icon-IGN-White.png");
 }
 .circle .avatar {
-  content:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/199072/Icon-Avatar-White.png");
+  content:url("../img/Icon-Avatar-White.png");
 }

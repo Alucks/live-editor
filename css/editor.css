@@ -146,3 +146,7 @@ font-weight:800;
 .dropdown-menu li {
    cursor: pointer;
 }
+
+textarea {
+  margin-bottom: 10px;
+}
