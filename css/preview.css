@@ -170,6 +170,7 @@ body {
 }
 
 .infoBar {
+  font-family: 'DINRoundCompPro-Bold',sans-serif;
   display: inline-block;
   color: #fff;
   -webkit-font-smoothing: antialiased;
@@ -201,20 +202,18 @@ body {
 .cardTitle {
   font-size: 1.4em;
   font-weight: 900;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #6C6C6C;
   margin-bottom: 10px;
 }
 
 .cardTitle .cardHandle {
-  font-size: .6em;
+  font-size: .55em;
   font-weight: 400;
-  margin-left: 10px;
-  color: #6C6C6C;
+  margin-left: 20px;
 }
 
 #twitterContent {
   padding-bottom: 10px;
+  -webkit-font-smoothing: antialiased !important;
 }
 
 
@@ -662,25 +661,25 @@ text-transform: initial;
 }
 
 #cardBody {
+  -webkit-font-smoothing: antialiased !important;
   font-size: 1.3em;
-  border-bottom: 2px solid #fff;
   margin: 15px 50px 20px 50px;
-  padding-bottom: 20px;
 }
 
 .cardInfo {
-  font-family: 'ff-din-round-web-pro',sans-serif;
+  font-family: 'DINRoundCompPro-Bold',sans-serif;
   font-weight: 600;
   font-size: 20px;
-  margin: 0px 50px 20px 50px;
+  margin: 0px 4px 20px 0px;
   text-transform: uppercase;
   letter-spacing: 1px;
+  float: left;
 }
 #cardInfo1 {
-float:left;
+  margin-left: 50px;
 }
 #cardInfo2 {
-  float:right;
+  color: rgba(255, 255, 255, 0.5);
 }
 .centerCardBlock {
   -webkit-transition: all 1.2s cubic-bezier(0.560, 0.205, 0.355, 1.000);
