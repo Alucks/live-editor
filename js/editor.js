@@ -4,8 +4,8 @@ $("[class='switch']").bootstrapSwitch();
 
 $(document).on("ready", function() {
    var textElements = [
-      "cBug_Show",
-      "cBug_Game",
+      "cBugShow",
+      "cBugGame",
       "bannerTitle",
       "bannerSub",
       "infoBarBanner",
@@ -184,12 +184,12 @@ $(document).on("ready", function() {
    liveData = {
                   'cBug': [{
                      'name': 'sony',
-                     'cBug_Show': 'Sony Post Show',
-                     'cBug_Game': 'Evolve'
+                     'cBugShow': 'Sony Post Show',
+                     'cBugGame': 'Evolve'
                   }, {
                      'name': 'microsoft',
-                     'cBug_Show': 'Microsoft Preshow',
-                     'cBug_Game': 'Halo 5'
+                     'cBugShow': 'Microsoft Preshow',
+                     'cBugGame': 'Halo 5'
                   }],
                   'nameLeft': [],
                   'nameRight': [],

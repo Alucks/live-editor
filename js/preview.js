@@ -12,8 +12,8 @@ $(document).on("ready", function() {
     $("body").addClass(localStorage.getItem("previewString"));
   }
   var textElements = [
-    "cBug_Show",
-    "cBug_Game",
+    "cBugShow",
+    "cBugGame",
     "bannerTitle",
     "bannerSub",
     "infoBarBanner",
