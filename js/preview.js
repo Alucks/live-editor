@@ -72,6 +72,97 @@ $(document).on("ready", function() {
     }
   });
 
+  function animationHeight(){
+    if (event.key == "bannerTitle") {
+        var lh = $('#banner .lowerContent').height();
+        var lowerh = lh + 40;
+        if (lowerh < 200){
+          $('#banner .lower').addClass('lowerSmall');
+        } else {
+          $('#banner .lower').removeClass('lowerSmall');
+        }
+
+    };
+    if (event.key == "twitterContent") {
+        var lh = $('#tCard .lowerContent').height();
+        var lowerh = lh + 40;
+        if (lowerh < 200){
+          $('#tCard .lower').addClass('lowerSmall');
+        } else {
+          $('#tCard .lower').removeClass('lowerSmall');
+        }
+
+    };
+    if (event.key == "comingUpTitle") {
+        var lh = $('#comingUp .lowerContent').height();
+        var lowerh = lh + 40;
+        if (lowerh > 100){
+          $('#comingUp .lower').addClass('lowerBig');
+        } else {
+          $('#comingUp .lower').removeClass('lowerBig');
+        }
+
+    };
+    if (event.key == "cardBody") {
+        var lh = $('#fullBG .cardContentBlock').height();
+        var lowerh = lh + 40;
+        if (lowerh < 200){
+          $('#fullBG .cardContent').addClass('lowerSmall');
+        } else {
+          $('#fullBG .cardContent').removeClass('lowerSmall');
+        }
+
+    };
+
+  };
+
+    function animationHeighIni() {
+      function bannerHeight() {
+        var lh = $('#banner .lowerContent').height();
+        var lowerh = lh + 40;
+        if (lowerh < 200){
+          $('#banner .lower').addClass('lowerSmall');
+        } else {
+          $('#banner .lower').removeClass('lowerSmall');
+        }
+
+    };
+    function tCardHeight() {
+        var lh = $('#tCard .lowerContent').height();
+        var lowerh = lh + 40;
+        if (lowerh < 200){
+          $('#tCard .lower').addClass('lowerSmall');
+        } else {
+          $('#tCard .lower').removeClass('lowerSmall');
+        }
+
+    };
+    function comingUpHeight() {
+        var lh = $('#comingUp .lowerContent').height();
+        var lowerh = lh + 40;
+        if (lowerh > 100){
+          $('#comingUp .lower').addClass('lowerBig');
+        } else {
+          $('#comingUp .lower').removeClass('lowerBig');
+        }
+
+    };
+    function fullHeight() {
+        var lh = $('#fullBG .cardContentBlock').height();
+        var lowerh = lh + 40;
+        if (lowerh < 200){
+          $('#fullBG .cardContent').addClass('lowerSmall');
+        } else {
+          $('#fullBG .cardContent').removeClass('lowerSmall');
+        }
+
+    };
+    bannerHeight();
+    tCardHeight();
+    comingUpHeight();
+    fullHeight();
+  };
+
   window.addEventListener('storage', function(event) {
     if (event.key == "previewString") $("body")[0].className = localStorage.getItem("previewString");
     $.each(textElements, function(i, value) {
@@ -84,6 +175,7 @@ $(document).on("ready", function() {
         }
       }
     });
+    animationHeight();
     $.each(iconTypes, function(i, value) {
       if (event.key == value && localStorage.getItem(value) !== null) {
         $('#' + value + ' img').attr("class", "iconWhite " + localStorage.getItem(value));
@@ -91,4 +183,5 @@ $(document).on("ready", function() {
       };
     });
   });
+  animationHeighIni();
 });

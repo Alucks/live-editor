@@ -11,8 +11,8 @@ $(document).on("ready", function() {
     $("body").addClass(localStorage.getItem("pushString"));
   }
   var textElements = [
-    "cBug_Show",
-    "cBug_Game",
+    "cBugShow",
+    "cBugGame",
     "bannerTitle",
     "bannerSub",
     "infoBarBanner",
@@ -83,7 +83,58 @@ $(document).on("ready", function() {
           $('#' + value + ' img').attr("class", "iconWhite " + localStorage.getItem(value));
         }
       });
+      animationHeighIni();
     }
 
   });
+
+  // Cahnge Element Heights Based on content
+
+function animationHeighIni() {
+      function bannerHeight() {
+        var lh = $('#banner .lowerContent').height();
+        var lowerh = lh + 40;
+        if (lowerh < 200){
+          $('#banner .lower').addClass('lowerSmall');
+        } else {
+          $('#banner .lower').removeClass('lowerSmall');
+        }
+    };
+    function tCardHeight() {
+        var lh = $('#tCard .lowerContent').height();
+        var lowerh = lh + 40;
+        if (lowerh < 200){
+          $('#tCard .lower').addClass('lowerSmall');
+        } else {
+          $('#tCard .lower').removeClass('lowerSmall');
+        }
+
+    };
+    function comingUpHeight() {
+        var lh = $('#comingUp .lowerContent').height();
+        var lowerh = lh + 40;
+        if (lowerh > 100){
+          $('#comingUp .lower').addClass('lowerBig');
+        } else {
+          $('#comingUp .lower').removeClass('lowerBig');
+        }
+
+    };
+    function fullHeight() {
+        var lh = $('#fullBG .cardContentBlock').height();
+        var lowerh = lh + 40;
+        if (lowerh < 200){
+          $('#fullBG .cardContent').addClass('lowerSmall');
+        } else {
+          $('#fullBG .cardContent').removeClass('lowerSmall');
+        }
+
+    };
+    bannerHeight();
+    tCardHeight();
+    comingUpHeight();
+    fullHeight();
+  };
+  animationHeighIni();
+
 });

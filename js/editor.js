@@ -185,11 +185,13 @@ $(document).on("ready", function() {
                   'cBug': [{
                      'name': 'sony',
                      'cBugShow': 'Sony Post Show',
-                     'cBugGame': 'Evolve'
+                     'cBugGame': 'Evolve',
+                     'cBugLines':'singleTitle'
                   }, {
                      'name': 'microsoft',
                      'cBugShow': 'Microsoft Preshow',
-                     'cBugGame': 'Halo 5'
+                     'cBugGame': 'Halo 5',
+                     'cBugLines':'doubleTitle'
                   }],
                   'nameLeft': [],
                   'nameRight': [],
