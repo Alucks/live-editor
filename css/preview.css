@@ -156,7 +156,7 @@ body {
   height: 48px;
   width: 48px;
   left: -24px;
-  top: 62px;
+  top: 64px;
   background-color: #bf1313;
   position: absolute;
   z-index: 4;
@@ -190,7 +190,7 @@ body {
   -webkit-transition: all .7s cubic-bezier(0.560, 0.205, 0.355, 1.000);
 }
 .infoBarContent {
-   padding: 4px 50px;
+   padding: 4px 50px 7px 50px;
    -webkit-transition: all .7s cubic-bezier(0.560, 0.205, 0.355, 1.000);
            transition: all .7s cubic-bezier(0.560, 0.205, 0.355, 1.000);
  }
@@ -835,7 +835,7 @@ Animations! =====*/
   max-height: 166px;
 }
 
-.comingUp-on #banner .lowerBig
+.comingUp-on #comingUp .lowerBig
  {
   max-height: 128px;
 }
