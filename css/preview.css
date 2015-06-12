@@ -807,6 +807,9 @@ Animations! =====*/
 .circle .arrow {
   content:url("../img/Icon-Arrow-White.png");
 }
+.circle .arrowRight {
+  content:url("../img/Icon-ArrowRight-White.png");
+}
 .circle .xbox {
   content:url("../img/Icon-Xbox-White.png");
 }
@@ -822,7 +825,15 @@ Animations! =====*/
 .circle .avatar {
   content:url("../img/Icon-Avatar-White.png");
 }
-
+.circle .ea {
+  content:url("../img/Icon-EA-White.png");
+}
+.circle .ubisoft {
+  content:url("../img/Icon-Ubisoft-White.png");
+}
+.circle .pipboy {
+  content:url("../img/Icon-Pipboy-White.png");
+}
 
 /*Varible Lower Heights for animations ==========*/
 .tCard-on #tCard .lowerSmall
