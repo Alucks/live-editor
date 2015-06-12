@@ -104,9 +104,10 @@ $(document).on("ready", function() {
 
     };
     if (event.key == "cardBody") {
-        var lh = $('#fullBG .cardContentBlock').height();
+        var lh = $('#fullBG .centerCardBlock').height();
         var lowerh = lh + 40;
-        if (lowerh < 200){
+        console.log(lowerh);
+        if (lowerh < 180){
           $('#fullBG .cardContent').addClass('lowerSmall');
         } else {
           $('#fullBG .cardContent').removeClass('lowerSmall');
@@ -148,9 +149,9 @@ $(document).on("ready", function() {
 
     };
     function fullHeight() {
-        var lh = $('#fullBG .cardContentBlock').height();
+        var lh = $('#fullBG .centerCardBlock').height();
         var lowerh = lh + 40;
-        if (lowerh < 200){
+        if (lowerh < 180){
           $('#fullBG .cardContent').addClass('lowerSmall');
         } else {
           $('#fullBG .cardContent').removeClass('lowerSmall');
