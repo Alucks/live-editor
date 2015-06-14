@@ -73,10 +73,15 @@ $(document).on("ready", function() {
   window.addEventListener('storage', function(event) {
     if (event.key == "updateString") {
       $("body")[0].className = localStorage.getItem("pushString");
+
       $.each(textElements, function(i, value) {
          if (localStorage.getItem(value) !== null) {
-        $('#' + value).text(localStorage.getItem(value));
-         }
+          if (value === "fullSocialBg") {
+            $('#fullBG').css("background-image", 'url("' + localStorage.getItem(value) + '")');
+          } else {
+              $('#' + value).text(localStorage.getItem(value));
+          }
+        }
       });
       $.each(iconTypes, function(i, value) {
         if (localStorage.getItem(value) !== null) {

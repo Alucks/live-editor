@@ -628,7 +628,7 @@ text-transform: initial;
   background-size: cover;
   background-image: url("../img/HaloBg2.jpg");
   -webkit-transition: all .8s cubic-bezier(0.560, 0.205, 0.355, 1.000);
-          transition: all .8s cubic-bezier(0.560, 0.205, 0.355, 1.000);
+  transition: all .8s cubic-bezier(0.560, 0.205, 0.355, 1.000);
   -webkit-transform-origin: 100% 100%;
       -ms-transform-origin: 100% 100%;
           transform-origin: 100% 100%;
@@ -637,7 +637,7 @@ text-transform: initial;
 #fullBGCard {
   position: absolute;
   left: 50%;
-  top:250px;
+  top:280px;
   margin-left: -390px;
   width: 780px;
   color: #fff;
