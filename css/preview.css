@@ -9,6 +9,7 @@ body {
   overflow: hidden;
   color: #231f20;
   /*  cursor: none;*/
+  /*background-image: url('../img/asafe.jpg')*/
 }
 .hidden {
   display:none !important;
@@ -23,8 +24,8 @@ body {
 #cBug {
   width: auto;
   max-height: 0px;
-  top: 4vh;
-  left: 10vh;
+  top: 8vh;
+  left: 12vh;
   position: absolute;
   overflow: hidden;
   border-left: 10px solid #bf1313;
@@ -81,6 +82,7 @@ body {
 /*Intro Animation */
 
 .cB-red {
+  top: 8vh;
   width: 10px;
   height: 10px;
   background-color: #bf1313;
@@ -89,14 +91,12 @@ body {
 }
 
 #cB-red1 {
-  top: 4vh;
   left: 14vh;
   visibility: hidden;
 }
 
 #cB-red2 {
-  top: 4vh;
-  left: 10vh;
+  left: 12vh;
   visibility: hidden;
 }
 
@@ -240,7 +240,7 @@ body {
 #nameRight {
   max-width: 36%;
   bottom: 8vh;
-  right: 10vh;
+  right: 12vh;
   position: absolute;
   text-align: right;
 }
@@ -316,13 +316,13 @@ text-transform: initial;
  {
   max-width: 50%;
   bottom: 8vh;
-  left: 10vh;
+  left: 12vh;
   position: absolute;
 }
 #tCard {
   max-width: 40%;
   bottom: 8vh;
-  left: 10vh;
+  left: 12vh;
   position: absolute;
 }
 
@@ -542,32 +542,32 @@ text-transform: initial;
 @-webkit-keyframes cBugHide {
   0% {
     max-height: 50px;
-    top: 4vh
+    top: 8vh
   }
   100% {
     max-height: 0px;
-    top: 9vh
+    top: 13vh
   }
 }
 
 @keyframes cBugHide {
   0% {
     max-height: 50px;
-    top: 4vh
+    top: 8vh
   }
   100% {
     max-height: 0px;
-    top: 9vh
+    top: 13vh
   }
 }
 
 /* Courtesy Bug Intro Animation Additional Elements ==== */
 @-webkit-keyframes cBug1 {
   0% {
-    left: 16vh;
+    left: 18vh;
   }
   30% {
-    left: 6vh;
+    left: 8vh;
   }
   70% {
     left: 12vh;
@@ -575,10 +575,10 @@ text-transform: initial;
 }
 @keyframes cBug1 {
   0% {
-    left: 16vh;
+    left: 18vh;
   }
   30% {
-    left: 6vh;
+    left: 8vh;
   }
   70% {
     left: 12vh;
@@ -590,7 +590,7 @@ text-transform: initial;
     left: -1vh;
   }
   75% {
-    left: 10vh;
+    left: 12vh;
   }
   100% {
     width: 200px;
@@ -602,7 +602,7 @@ text-transform: initial;
     left: -1vh;
   }
   75% {
-    left: 10vh;
+    left: 12vh;
   }
   100% {
     width: 200px;
