@@ -24,7 +24,7 @@ body {
 #cBug {
   width: auto;
   max-height: 0px;
-  top: 8vh;
+  top: 6vh;
   left: 12vh;
   position: absolute;
   overflow: hidden;
@@ -82,7 +82,7 @@ body {
 /*Intro Animation */
 
 .cB-red {
-  top: 8vh;
+  top: 6vh;
   width: 10px;
   height: 10px;
   background-color: #bf1313;
@@ -137,11 +137,17 @@ body {
 }
 
 .lowerContent {
-  padding: 20px 50px;
+  padding: 17px 50px 23px 50px;
   -webkit-transform: translate3d(0, 100%, 0);
           transform: translate3d(0, 100%, 0);
   -webkit-transition: all .8s cubic-bezier(0.560, 0.205, 0.355, 1.000);
           transition: all .8s cubic-bezier(0.560, 0.205, 0.355, 1.000);
+}
+
+#tCard .lowerContent,
+#nameRight .lowerContent,
+#nameLeft .lowerContent {
+  padding: 20px 50px;
 }
 
 .lowerTitle {
@@ -542,22 +548,22 @@ text-transform: initial;
 @-webkit-keyframes cBugHide {
   0% {
     max-height: 50px;
-    top: 8vh
+    top: 6vh
   }
   100% {
     max-height: 0px;
-    top: 13vh
+    top: 11vh
   }
 }
 
 @keyframes cBugHide {
   0% {
     max-height: 50px;
-    top: 8vh
+    top: 6vh
   }
   100% {
     max-height: 0px;
-    top: 13vh
+    top: 11vh
   }
 }
 
@@ -633,6 +639,8 @@ text-transform: initial;
       -ms-transform-origin: 100% 100%;
           transform-origin: 100% 100%;
   z-index: -99;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 #fullBGCard {
   position: absolute;
@@ -641,6 +649,7 @@ text-transform: initial;
   margin-left: -390px;
   width: 780px;
   color: #fff;
+  z-index: 2;
 
 }
 #fullBGCard .centerCard{

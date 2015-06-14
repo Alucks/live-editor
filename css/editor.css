@@ -88,7 +88,7 @@ input[type="checkbox"].collapseButton  {
   border: none;
   float: left;
   width: 1920px;
-  height: 1020px;
+  height: 1080px;
   z-index: 1;
   background-color: #868686;
   -webkit-transform:scale3d(.7,.7,1);
