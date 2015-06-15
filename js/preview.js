@@ -167,11 +167,11 @@ $(document).on("ready", function() {
   window.addEventListener('storage', function(event) {
     if (event.key == "previewString") {
       $("body")[0].className = localStorage.getItem("previewString");
-      if (event.key == "previewString" && $("body").hasClass("fullSocial-on")) {
-        var video = document.getElementById('socialVideo')
-        video.currentTime = 0;
-        video.load();
-      } 
+      // if (event.key == "previewString" && $("body").hasClass("fullSocial-on")) {
+      //   var video = document.getElementById('socialVideo')
+      //   video.currentTime = 0;
+      //   video.load();
+      // } 
     }
 
 

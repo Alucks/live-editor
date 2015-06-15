@@ -74,11 +74,11 @@ $(document).on("ready", function() {
     if (event.key == "updateString") {
       $("body")[0].className = localStorage.getItem("pushString");
 
-      if (event.key == "updateString" && $("body").hasClass("fullSocial-on")) {
-        var video = document.getElementById('socialVideo')
-        video.currentTime = 0;
-        video.load();
-      } 
+      // if (event.key == "updateString" && $("body").hasClass("fullSocial-on")) {
+      //   var video = document.getElementById('socialVideo')
+      //   video.currentTime = 0;
+      //   video.load();
+      // } 
 
       $.each(textElements, function(i, value) {
          if (localStorage.getItem(value) !== null) {

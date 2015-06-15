@@ -36,6 +36,22 @@
       <div class="collapse in" id="cBugControl">
          <form id="cBugForm">
             <div class="form-group">
+               <label for="name">Save & Load</label>
+               <div class="input-group">
+                  <span class="input-group-btn">
+                     <button class="btn btn-default saveBtn" data-type="cBug">Save</button>
+                  </span>
+                  <input type="text" class="form-control" name="name" placeholder="save name" />
+                  <div class="input-group-btn">
+                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load <span class="caret"></span></button>
+                     <ul id="cBug-select" class="dropdown-menu dropdown-menu-right" role="menu">
+                        <li><a href="#">Microsoft Pre Show</a></li>
+                     </ul>
+                  </div>
+                  </div>
+                  <!-- /btn-group -->
+               </div>
+            <div class="form-group">
             <label for="cBugLines">Single / Double Title Select</label>
             <select name='cBugLines' class="form-control">
                <option value='doubleTitle'>Both Titles</option>
@@ -50,22 +66,8 @@
                <label for="cBugGame">Game Title</label>
                <input type="text" name="cBugGame" class="form-control" placeholder="Halo 5" />
             </div>
-            <div class="form-group">
-               <label for="name">Save & Load</label>
-               <div class="input-group">
-                  <span class="input-group-btn">
-                     <button class="btn btn-default saveBtn" data-type="cBug">Save</button>
-                  </span>
-                  <input type="text" class="form-control" name="name" placeholder="save name" />
-                  <div class="input-group-btn">
-                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load <span class="caret"></span></button>
-                     <ul id="cBug-select" class="dropdown-menu dropdown-menu-right" role="menu">
-                        <li><a href="#">Microsoft Pre Show</a></li>
-                     </ul>
-                  </div>
-                  <!-- /btn-group -->
-               </div>
-            </div>
+            
+            
          </form>
 
       </div>
@@ -78,6 +80,21 @@
       </div>
       <div class="collapse" id="nameLeftControl">
          <form id="nameLeftForm">
+            <div class="form-group">
+               <label for="name">Save & Load</label>
+               <div class="input-group">
+                  <span class="input-group-btn">
+                     <button class="btn btn-default saveBtn" data-type="nameLeft">Save</button>
+                  </span>
+                  <input type="text" class="form-control" name="name" placeholder="save name" />
+                  <div class="input-group-btn">
+                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load <span class="caret"></span></button>
+                     <ul id="nameLeft-select" class="dropdown-menu dropdown-menu-right" role="menu">
+                        <li><a href="#">Microsoft Pre Show</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
            <div class="form-group">
                <label for="nameLeftIcon">Icon</label>
                <select name='nameLeftIcon' class="form-control iconSelect">
@@ -106,21 +123,6 @@
                <label for="nameLeftHandle">Handle / title</label>
                <input type="text" name="nameLeftHandle" class="form-control" placeholder="@agentbizzle" />
             </div>
-            <div class="form-group">
-               <label for="name">Save & Load</label>
-               <div class="input-group">
-                  <span class="input-group-btn">
-                     <button class="btn btn-default saveBtn" data-type="nameLeft">Save</button>
-                  </span>
-                  <input type="text" class="form-control" name="name" placeholder="save name" />
-                  <div class="input-group-btn">
-                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load <span class="caret"></span></button>
-                     <ul id="nameLeft-select" class="dropdown-menu dropdown-menu-right" role="menu">
-                        <li><a href="#">Microsoft Pre Show</a></li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
          </form>
       </div>
    </div>
@@ -133,6 +135,22 @@
       </div>
       <div class="collapse" id="nameRightControl">
          <form id="nameRightForm">
+            <div class="form-group">
+               <label for="name">Save & Load</label>
+               <div class="input-group">
+                  <span class="input-group-btn">
+                     <button class="btn btn-default saveBtn" data-type="nameRight">Save</button>
+                  </span>
+                  <input type="text" class="form-control" name="name" placeholder="save name" />
+                  <div class="input-group-btn">
+                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load <span class="caret"></span></button>
+                     <ul id="nameRight-select" class="dropdown-menu dropdown-menu-right" role="menu">
+                        <li><a href="#">Microsoft Pre Show</a></li>
+                     </ul>
+                  </div>
+                  <!-- /btn-group -->
+               </div>
+            </div>
             <div class="form-group">
                <label for="nameRightIcon">Icon</label>
                <select name='nameRightIcon' class="form-control iconSelect">
@@ -161,22 +179,6 @@
                <label for="nameRightHandle">Handle / title</label>
                <input type="text" name="nameRightHandle" class="form-control" placeholder="@agentbizzle" />
             </div>
-            <div class="form-group">
-               <label for="name">Save & Load</label>
-               <div class="input-group">
-                  <span class="input-group-btn">
-                     <button class="btn btn-default saveBtn" data-type="nameRight">Save</button>
-                  </span>
-                  <input type="text" class="form-control" name="name" placeholder="save name" />
-                  <div class="input-group-btn">
-                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load <span class="caret"></span></button>
-                     <ul id="nameRight-select" class="dropdown-menu dropdown-menu-right" role="menu">
-                        <li><a href="#">Microsoft Pre Show</a></li>
-                     </ul>
-                  </div>
-                  <!-- /btn-group -->
-               </div>
-            </div>
          </form>
       </div>
    </div>
@@ -189,6 +191,22 @@
       </div>
       <div class="collapse" id="nameBarControl">
          <form id="nameBarForm">
+         <div class="form-group">
+               <label for="name">Save & Load</label>
+               <div class="input-group">
+                  <span class="input-group-btn">
+                     <button class="btn btn-default saveBtn" data-type="nameBar">Save</button>
+                  </span>
+                  <input type="text" class="form-control" name="name" placeholder="save name" />
+                  <div class="input-group-btn">
+                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load <span class="caret"></span></button>
+                     <ul id="nameBar-select" class="dropdown-menu dropdown-menu-right" role="menu">
+                        <li><a href="#">Microsoft Pre Show</a></li>
+                     </ul>
+                  </div>
+                  <!-- /btn-group -->
+               </div>
+            </div>
             <div class="form-group">
                <h5> Info bar</h5>
                <input type="text" name="infoBarNameBar" class="form-control" placeholder="Brian Altano" />
@@ -236,22 +254,7 @@
             <div class="form-group">
                <input type="text" name="nBarPerson5Title" class="form-control" placeholder="@agentbizzle" />
             </div>
-            <div class="form-group">
-               <label for="name">Save & Load</label>
-               <div class="input-group">
-                  <span class="input-group-btn">
-                     <button class="btn btn-default saveBtn" data-type="nameBar">Save</button>
-                  </span>
-                  <input type="text" class="form-control" name="name" placeholder="save name" />
-                  <div class="input-group-btn">
-                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load <span class="caret"></span></button>
-                     <ul id="nameBar-select" class="dropdown-menu dropdown-menu-right" role="menu">
-                        <li><a href="#">Microsoft Pre Show</a></li>
-                     </ul>
-                  </div>
-                  <!-- /btn-group -->
-               </div>
-            </div>
+            
          </form>
       </div>
    </div>
@@ -264,6 +267,21 @@
       </div>
       <div class="collapse" id="bannerControl">
          <form id="bannerForm">
+                     <div class="form-group">
+               <label for="name">Save & Load</label>
+               <div class="input-group">
+                  <span class="input-group-btn">
+                     <button class="btn btn-default saveBtn" data-type="banner">Save</button>
+                  </span>
+                  <input type="text" class="form-control" name="name" placeholder="save name" />
+                  <div class="input-group-btn">
+                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load <span class="caret"></span></button>
+                     <ul id="banner-select" class="dropdown-menu dropdown-menu-right" role="menu">
+                        <li><a href="#">Microsoft Pre Show</a></li>
+                  </div>
+                  <!-- /btn-group -->
+               </div>
+            </div>
             <div class="form-group">
                <label for="bannerIcon">Icon</label>
                <select name='bannerIcon' class="form-control iconSelect">
@@ -297,21 +315,7 @@
                <label for="lowerHandle">Info Bar</label>
                <input type="text" name="infoBarBanner" class="form-control" placeholder="News From E3" />
             </div>
-            <div class="form-group">
-               <label for="name">Save & Load</label>
-               <div class="input-group">
-                  <span class="input-group-btn">
-                     <button class="btn btn-default saveBtn" data-type="banner">Save</button>
-                  </span>
-                  <input type="text" class="form-control" name="name" placeholder="save name" />
-                  <div class="input-group-btn">
-                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load <span class="caret"></span></button>
-                     <ul id="banner-select" class="dropdown-menu dropdown-menu-right" role="menu">
-                        <li><a href="#">Microsoft Pre Show</a></li>
-                  </div>
-                  <!-- /btn-group -->
-               </div>
-            </div>
+
          </form>
       </div>
    </div>
@@ -323,6 +327,22 @@
       </div>
       <div class="collapse" id="comingUpNextControl">
          <form id="comingUpForm">
+         
+            <div class="form-group">
+               <label for="name">Save & Load</label>
+               <div class="input-group">
+                  <span class="input-group-btn">
+                     <button class="btn btn-default saveBtn" data-type="comingUp">Save</button>
+                  </span>
+                  <input type="text" class="form-control" name="name" placeholder="save name" />
+                  <div class="input-group-btn">
+                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load <span class="caret"></span></button>
+                     <ul id="comingUp-select" class="dropdown-menu dropdown-menu-right" role="menu">
+                        <li><a href="#">Microsoft Pre Show</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
             <div class="form-group">
                <label for="comingUpIcon">Icon</label>
                <select name='comingUpIcon' class="form-control iconSelect">
@@ -350,21 +370,6 @@
             <div class="form-group">
                <label for="infoBarComingUp">Time</label>
                <input type="text" name="infoBarComingUp" class="form-control" placeholder=" Coming Up @ 8 PM PST" />
-            </div>
-            <div class="form-group">
-               <label for="name">Save & Load</label>
-               <div class="input-group">
-                  <span class="input-group-btn">
-                     <button class="btn btn-default saveBtn" data-type="comingUp">Save</button>
-                  </span>
-                  <input type="text" class="form-control" name="name" placeholder="save name" />
-                  <div class="input-group-btn">
-                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load <span class="caret"></span></button>
-                     <ul id="comingUp-select" class="dropdown-menu dropdown-menu-right" role="menu">
-                        <li><a href="#">Microsoft Pre Show</a></li>
-                     </ul>
-                  </div>
-               </div>
             </div>
          </form>
       </div>
@@ -442,6 +447,21 @@
       </div>
       <div class="collapse" id="fullSocialControl">
          <form id="fullSocialForm">
+         <div class="form-group">
+               <label for="name">Save & Load</label>
+               <div class="input-group">
+                  <span class="input-group-btn">
+                     <button class="btn btn-default saveBtn" data-type="fullSocial">Save</button>
+                  </span>
+                  <input type="text" class="form-control" name="name" placeholder="save name" />
+                  <div class="input-group-btn">
+                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load <span class="caret"></span></button>
+                     <ul id="fullSocial-select" class="dropdown-menu dropdown-menu-right" role="menu">
+                        <li><a href="#">Microsoft Pre Show</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
             <div class="form-group">
                <label for="fullSocialIcon">Icon</label>
                <select name='fullSocialIcon' class="form-control iconSelect">
@@ -485,21 +505,6 @@
             <div class="form-group">
                <label for="fullSocialBg">Background Image URL</label>
                <input type="text" name="fullSocialBg" class="form-control" placeholder="img/name.jpg" />
-            </div>
-            <div class="form-group">
-               <label for="name">Save & Load</label>
-               <div class="input-group">
-                  <span class="input-group-btn">
-                     <button class="btn btn-default saveBtn" data-type="fullSocial">Save</button>
-                  </span>
-                  <input type="text" class="form-control" name="name" placeholder="save name" />
-                  <div class="input-group-btn">
-                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load <span class="caret"></span></button>
-                     <ul id="fullSocial-select" class="dropdown-menu dropdown-menu-right" role="menu">
-                        <li><a href="#">Microsoft Pre Show</a></li>
-                     </ul>
-                  </div>
-               </div>
             </div>
          </form>
       </div>
