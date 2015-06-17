@@ -127,6 +127,23 @@ $(document).on("ready", function() {
       localStorage.setItem('previewString', stateString);
    };
 
+   $(document).keypress(function (e) {
+    if (e.which == 13) {
+ str_count = localStorage.getItem('updateString');
+      if (str_count == null || str_count == "null"){
+      count = 0;
+      } else {
+         count = parseInt(str_count);
+      }
+      count++;
+      
+      localStorage.setItem('pushString', localStorage.getItem("previewString"));
+      localStorage.setItem('updateString', count);
+      console.log(localStorage.getItem("updateString"));
+      $('#pushBtn').removeClass('glow');
+      }
+      });
+
    $("#pushBtn").click(function() {
       str_count = localStorage.getItem('updateString');
       if (str_count == null || str_count == "null"){
