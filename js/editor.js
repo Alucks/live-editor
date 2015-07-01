@@ -36,7 +36,8 @@ $(document).on("ready", function() {
       "cardBody",
       "cardInfo1",
       "cardInfo2",
-      "fullSocialBg"
+      "fullSocialBg",
+      "cBugSponsorImage"
 
    ];
    var elementStates = [
@@ -49,14 +50,15 @@ $(document).on("ready", function() {
       "nameBar",
       "nameBarNumber",
       "fullSocial",
-      "cBugLines"
+      "cBugLines",
+      "cBugSponsor"
 
    ];
    var textAreas = [
       "cardBody",
       "twitterContent"
    ];
-   
+
    var iconTypes = [
   	  "bannerIcon",
      "comingUpIcon",
@@ -74,7 +76,7 @@ $(document).on("ready", function() {
          $('input[name=' + value + ']').val(localStorage.getItem(value));
       }
    });
-   
+
    $.each(iconTypes, function(i, value) {
       if (localStorage.getItem(value) !== null) {
          $('select[name=' + value + ']').val(localStorage.getItem(value));
@@ -92,8 +94,8 @@ $(document).on("ready", function() {
    });
 
    $(".collapseButton").click(function() {
-      $(this).toggleClass('glyphicon-chevron-down');
-      $(this).toggleClass('glyphicon-chevron-up');
+      $(this).children('span').toggleClass('glyphicon-chevron-down');
+      $(this).children('span').toggleClass('glyphicon-chevron-up');
    });
 
    $("input[type=text] , textarea").on("input", function() {
@@ -129,22 +131,22 @@ $(document).on("ready", function() {
 
    $(document).keypress(function (e) {
     if (e.which == 13) {
- str_count = localStorage.getItem('updateString');
+      str_count = localStorage.getItem('updateString');
       if (str_count == null || str_count == "null"){
-      count = 0;
+        count = 0;
       } else {
-         count = parseInt(str_count);
+        count = parseInt(str_count);
       }
       count++;
-      
+
       localStorage.setItem('pushString', localStorage.getItem("previewString"));
       localStorage.setItem('updateString', count);
       console.log(localStorage.getItem("updateString"));
       $('#pushBtn').removeClass('glow');
-      }
-      });
+    }
+  });
 
-   $("#pushBtn").click(function() {
+  $("#pushBtn").click(function() {
       str_count = localStorage.getItem('updateString');
       if (str_count == null || str_count == "null"){
       count = 0;
@@ -152,7 +154,7 @@ $(document).on("ready", function() {
          count = parseInt(str_count);
       }
       count++;
-      
+
       localStorage.setItem('pushString', localStorage.getItem("previewString"));
       localStorage.setItem('updateString', count);
       console.log(localStorage.getItem("updateString"));
@@ -196,7 +198,7 @@ $(document).on("ready", function() {
 
    /*Load and Save Information ===============*/
    var liveData;
-   
+
    function clearData() {
    liveData = {
                   'cBug': [{
@@ -220,7 +222,7 @@ $(document).on("ready", function() {
                };
    };
    clearData();
-   
+
    function loadData() {
       if (localStorage.getItem('liveData') !== null) {
            liveData = JSON.parse(localStorage.getItem('liveData'));
@@ -231,7 +233,7 @@ $(document).on("ready", function() {
    function Call() {
       $('.dropdown-menu').empty();
       jQuery.each(liveData, function(i, field) {
-         var mList = $('#' + i + '-select'); // Target selsctor ul    
+         var mList = $('#' + i + '-select'); // Target selector ul
 
          jQuery.each(liveData[i], function(index, save) {
             var $li = $('<li/>');
@@ -241,17 +243,17 @@ $(document).on("ready", function() {
             $remover.html('<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>');
             $remover.addClass('remover');
             $remover.data("type", i)
-            
+
             jQuery.each(liveData[i][index], function(key, value) {
                if (key == 'name') {
                   $anchor.text(value); // assign name value to li text .text(value)
                   $remover.data("name", value);
                } else {
-                  $anchor.data(key, value); // assign all other values to Data 
+                  $anchor.data(key, value); // assign all other values to Data
                }
                $anchor.appendTo($li);
                $remover.appendTo($li);
-               
+
                $li.appendTo(mList);
             });
          });
@@ -269,7 +271,7 @@ $(document).on("ready", function() {
             localStorage.setItem(textElements[i], dataVal);
          };
       };
-      
+
       for (var i = 0; i < iconTypes.length; i++) {
          dataVal = $this.data(iconTypes[i]);
          if (typeof dataVal !== 'undefined') {
@@ -279,7 +281,7 @@ $(document).on("ready", function() {
       };
       stateStringBuild();
    });
-   
+
    $(document).on('click', 'li .remover', function(e) {
       var $this = $(this);
       var $name = $this.data("name");
@@ -291,14 +293,14 @@ $(document).on("ready", function() {
       Call();
       localStorage.setItem('liveData', JSON.stringify(liveData));
    });
-   
+
    $('.saveBtn').on('click', function() {
       var $type = $(this).data("type");
       var $name = $('form#' + $type + 'Form [name="name"]').val();
       liveData[$type] = $.grep(liveData[$type], function(value, i){
          return (value.name !== $name );
       });
-  
+
       liveData[$type].push($('form#' + $type + 'Form').serializeObject());
       localStorage.setItem('liveData', JSON.stringify(liveData));
       console.log(localStorage.getItem('liveData'));
@@ -306,13 +308,13 @@ $(document).on("ready", function() {
       $('form#' + $type + 'Form [name="name"]').val(null);
       return false;
    });
-   
+
    $('#exporter').click(function() {
       $(document.getElementsByName("dataWindow")).val(JSON.stringify(liveData));
       clearData();
       Call();
    });
-   
+
    $('#importer').click(function() {
       var dataEntry = $(document.getElementsByName("dataWindow")).val();
       liveData = JSON.parse(dataEntry);
@@ -320,7 +322,6 @@ $(document).on("ready", function() {
       Call();
       $(document.getElementsByName("dataWindow")).val(' ');
    });
-   
    loadData();
    Call();
 });

@@ -38,19 +38,33 @@ body {
 }
 
 .cBugText {
+  min-width: 324px;
   font-weight: 500;
   letter-spacing: 1px;
   font-size: 1em;
   line-height: .85em;
   padding: 11px 0px 12px 0px;
-
   text-transform: uppercase;
 }
+
+#cBugSponsor {
+    max-height: 0px;
+    top: 10.6vh;
+    left: 12vh;
+    position: absolute;
+    overflow: hidden;
+    border-left: 10px solid #bf1313;
+    -webkit-transition: max-height .8s cubic-bezier(0.560, 0.205, 0.355, 1.000);
+    transition: max-height .8s cubic-bezier(0.560, 0.205, 0.355, 1.000);
+    z-index: 98;
+    line-height: 0;
+}
+
 
 .singleTitle #cBugTextBlock {
   -webkit-animation:initial !important;
           animation:initial !important;
-}  
+}
 
 .cBug-on #cBugTextBlock {
 -webkit-animation: cBugTextShuffle ease-in-out 30s infinite 2s;
@@ -73,7 +87,7 @@ body {
   -webkit-animation: cBugHide ease .8s;
           animation: cBugHide ease .8s;
   -webkit-animation-fill-mode:forwards;
-          animation-fill-mode:forwards;  
+          animation-fill-mode:forwards;
 }
 
 .lB_ScaleHeight {
@@ -229,7 +243,7 @@ body {
 #banner .lowerContent {
     -webkit-transition: all .8s cubic-bezier(0.455, 0.030, 0.515, 0.955);
     transition: all .8s cubic-bezier(0.455, 0.030, 0.515, 0.955);
-  
+
 }
 
 /*== Left & Right Name Styles ==========*/
@@ -335,6 +349,13 @@ text-transform: initial;
 
 /*== Animation Assigners ==========*/
 
+.cBugSponsor-on #cBugSponsor {
+      max-height: 150px;
+      -webkit-transition-delay:1.1s;
+              transition-delay:1.1s;
+}
+
+
 .comingUp-on #comingUp .lower {
     -webkit-transition-delay:1s;
             transition-delay:1s;
@@ -375,7 +396,7 @@ text-transform: initial;
 .nameLeft-off #nameLeft .lower,
 .nameRight-off #nameRight .lower {
   -webkit-transition-delay:.5s;
-          transition-delay:.5s;  
+          transition-delay:.5s;
   max-height: 0px;
   top: -125px;
   margin-top:0px;
@@ -682,7 +703,7 @@ text-transform: initial;
 #fullBG .cardTitle .cardHandle{
   display: block;
   margin: 0;
-  
+
 }
 
 #cardBody {
@@ -720,7 +741,7 @@ Animations! =====*/
   -webkit-transition-delay:2.1s;
           transition-delay:2.1s;
   -webkit-transform: translate3d(0, 0%, 0);
-          transform: translate3d(0, 0%, 0); 
+          transform: translate3d(0, 0%, 0);
 }
 .fullSocial-off #fullBGCard .cardTitle{
   -webkit-transform: translate3d(0, -100%, 0);

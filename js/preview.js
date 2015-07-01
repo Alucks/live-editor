@@ -44,7 +44,8 @@ $(document).on("ready", function() {
     "cardBody",
     "cardInfo1",
     "cardInfo2",
-    "fullSocialBg"
+    "fullSocialBg",
+    "cBugSponsorImage"
   ];
   var iconTypes = [
     "bannerIcon",
@@ -61,6 +62,9 @@ $(document).on("ready", function() {
     if (localStorage.getItem(value) !== null) {
       if (value === "fullSocialBg") {
         $('#fullBG').css("background-image", 'url("' + localStorage.getItem(value) + '")');
+      } if (value === "cBugSponsorImage") {
+        $('.cBugSponsorImage').attr('src', localStorage.getItem(value));
+        console.log("this is the entered value => " + localStorage.getItem(value));
       } else {
         $('#' + value).text(localStorage.getItem(value));
       }
@@ -171,7 +175,7 @@ $(document).on("ready", function() {
       //   var video = document.getElementById('socialVideo')
       //   video.currentTime = 0;
       //   video.load();
-      // } 
+      // }
     }
 
 
@@ -180,7 +184,11 @@ $(document).on("ready", function() {
         if (value === "fullSocialBg") {
           $('#fullBG').css("background-image", 'url("' + localStorage.getItem(value) + '")');
           console.log("this is the entered value => " + localStorage.getItem(value));
-        } else {
+        } if (value === "cBugSponsorImage") {
+          $('.cBugSponsorImage').attr('src', localStorage.getItem(value));
+          console.log("this is the entered value => " + localStorage.getItem(value));
+        }
+         else {
           $('#' + value).text(localStorage.getItem(value));
         }
       }

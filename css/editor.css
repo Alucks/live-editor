@@ -3,20 +3,30 @@ body{
    background-color: #0D0D0D;
 }
 #controller {
-   padding: 0px 10px;
    float:left;
    width: 395px;
    min-height: 100vh;
+   background-color: #F7F7F7;
+}
+.secondary{
+  color: #999999;
+  font-weight: 200;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.controlGroup{
+   padding: 5px 5px 8px 5px;
+   margin:0px 10px 10px 10px;
+   border: 1px solid #A8A8A8;
+   border-radius: 4px;
+   box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.05);
    background-color: #fff;
 }
-.controlGroup{
-   margin-bottom:20px;
-}
 .controlGroup .heading {
-   border-bottom:1px solid #999;
    margin-bottom:10px;
    padding-bottom: 3px;
-   
+   border-bottom: 1px solid #d0d0d0;
 }
 
 .bootstrap-switch {
@@ -34,6 +44,7 @@ input[type="checkbox"].collapseButton  {
    border:none;
 }
 
+
 .collapseButton:checked ~ .collapsable {
    max-height: 300px;
 }
@@ -47,16 +58,17 @@ input[type="checkbox"].collapseButton  {
 }
 
 .pushMenu {
-   border-bottom:1px solid #868686;
-   padding-bottom:10px;
+   padding:10px;
    margin-bottom:10px;
    position:fixed;
-   width:380px;
+   width: 395px;
    background-color:#fff;
+   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.05);
+   border-bottom: 1px solid rgb(155, 155, 155);
    z-index:99
 }
 #cBugGroup {
-   padding-top:120px;
+   margin-top:125px;
 }
 
 .collapse.in {border-bottom: 1px solid #DFDFDF;
@@ -67,7 +79,7 @@ input[type="checkbox"].collapseButton  {
 }
 
 .glow{
-   box-shadow: 0px 0px 5px #FFFFFF; 
+   box-shadow: 0px 0px 5px #FFFFFF;
    background-color: #5cb85c !important;
    -webkit-animation: glowing 1s ease-in-out infinite alternate;
            animation: glowing 1s ease-in-out infinite alternate;
@@ -97,15 +109,6 @@ input[type="checkbox"].collapseButton  {
       -ms-transform-origin: top left;
           transform-origin: top left;
 }
-/*#preview{
-   position:fixed;
-   border: none;
-   float:right;
-   width: calc(100% - 400px);
-   height: 100vh;
-   z-index: 1;
-   background-color: #868686;
-}*/
 .preText{
    position:relative;
    float:right;
@@ -117,7 +120,7 @@ input[type="checkbox"].collapseButton  {
 }
 .title {
    color:#bf1313;
-   
+
 }
 
 li .remover{
@@ -125,12 +128,12 @@ li .remover{
  position: absolute;
  right: 0px;
  padding: 3px 5px;
-   
+
 }
 li .remover:hover{
 color: #898989 !important;
-background-color: initial !important;   
-   
+background-color: initial !important;
+
 }
 
 .dropdown-menu li a {
@@ -149,4 +152,11 @@ font-weight:800;
 
 textarea {
   margin-bottom: 10px;
+}
+/* Bootstrap Overrides ========*/
+.form-group {
+  margin-bottom: 5px;
+}
+.glyphicon {
+  top: 2px;
 }

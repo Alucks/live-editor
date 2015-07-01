@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- add 'in' class to collapse to leave it as open  -->
 <html >
   <head>
     <meta charset="UTF-8">
@@ -6,17 +7,17 @@
       <meta name="robots" content="noindex">
 
     <title>IGN Live Graphics Editor</title>
-    
-    
-    
+
+
+
    <link rel='stylesheet prefetch' href='css/bootstrap.min.css'>
    <link rel='stylesheet prefetch' href='css/bootstrap-switch.min.css'>
    <link rel='stylesheet prefetch' href='css/animate.css'>
    <link rel="stylesheet" href="css/editor.css">
 
-    
-    
-    
+
+
+
   </head>
 
   <body>
@@ -30,27 +31,21 @@
    <div id="cBugGroup" class="controlGroup">
       <div class="heading">
          <span class="lead">Courtesy Bug</span>
-         <button type="button" class="collapseButton btn btn-default glyphicon glyphicon-chevron-up" data-toggle="collapse" href="#cBugControl" /></button>
          <input type="checkbox" id="cBug" class="switch" />
+         <br>
+         <span class="lead secondary">Sponsor Image</span>
+
+         <input type="checkbox" id="cBugSponsor" class="switch" />
       </div>
-      <div class="collapse in" id="cBugControl">
+      <div class="btn-group">
+         <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load a State <span class="caret"></span></button>
+         <ul id="cBug-select" class="dropdown-menu dropdown-menu-left" role="menu">
+            <li><a href="#">Microsoft Pre Show</a></li>
+         </ul>
+      </div>
+      <button type="button" class="collapseButton btn btn-default" data-toggle="collapse" href="#cBugControl" />Edit Module <span class="glyphicon glyphicon-chevron-down"></span></button>
          <form id="cBugForm">
-            <div class="form-group">
-               <label for="name">Save & Load</label>
-               <div class="input-group">
-                  <span class="input-group-btn">
-                     <button class="btn btn-default saveBtn" data-type="cBug">Save</button>
-                  </span>
-                  <input type="text" class="form-control" name="name" placeholder="save name" />
-                  <div class="input-group-btn">
-                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load <span class="caret"></span></button>
-                     <ul id="cBug-select" class="dropdown-menu dropdown-menu-right" role="menu">
-                        <li><a href="#">Microsoft Pre Show</a></li>
-                     </ul>
-                  </div>
-                  </div>
-                  <!-- /btn-group -->
-               </div>
+              <div class="collapse" id="cBugControl">
             <div class="form-group">
             <label for="cBugLines">Single / Double Title Select</label>
             <select name='cBugLines' class="form-control">
@@ -66,8 +61,19 @@
                <label for="cBugGame">Game Title</label>
                <input type="text" name="cBugGame" class="form-control" placeholder="Halo 5" />
             </div>
-            
-            
+            <div class="form-group">
+               <label for="cBugSponsorImage">Sponsor Image URL</label>
+               <input type="text" name="cBugSponsorImage" class="form-control" placeholder="img/name.jpg" />
+            </div>
+            <div class="form-group">
+               <div class="input-group">
+                  <span class="input-group-btn">
+                     <button class="btn btn-default saveBtn" data-type="cBug">Save</button>
+                  </span>
+                  <input type="text" class="form-control" name="name" placeholder="save name" />
+              </div>
+            </div>
+
          </form>
 
       </div>
@@ -75,13 +81,12 @@
    <div id="nameBarleftGroup" class="controlGroup">
       <div class="heading">
          <span class="lead">Name - Left</span>
-         <button type="button" class="collapseButton btn btn-default glyphicon glyphicon-chevron-down" data-toggle="collapse" href="#nameLeftControl" /></button>
+         <button type="button" class="collapseButton btn btn-default" data-toggle="collapse" href="#nameLeftControl" /><span class="glyphicon glyphicon-chevron-down"></span></button>
          <input type="checkbox" id="nameLeft" class="switch" />
       </div>
-      <div class="collapse" id="nameLeftControl">
+
          <form id="nameLeftForm">
             <div class="form-group">
-               <label for="name">Save & Load</label>
                <div class="input-group">
                   <span class="input-group-btn">
                      <button class="btn btn-default saveBtn" data-type="nameLeft">Save</button>
@@ -95,6 +100,7 @@
                   </div>
                </div>
             </div>
+        <div class="collapse" id="nameLeftControl">
            <div class="form-group">
                <label for="nameLeftIcon">Icon</label>
                <select name='nameLeftIcon' class="form-control iconSelect">
@@ -112,7 +118,7 @@
                   <option value='triforce'>Triforce</option>
                   <option value='ea'>EA</option>
                   <option value='ubisoft'>Ubisoft</option>
-                  <option value='pipboy'>Pipboy</option>               
+                  <option value='pipboy'>Pipboy</option>
                </select>
             </div>
             <div class="form-group">
@@ -130,13 +136,13 @@
    <div id="nameBarRightGroup" class="controlGroup">
       <div class="heading">
          <span class="lead">Name - Right</span>
-         <button type="button" class="collapseButton btn btn-default glyphicon glyphicon-chevron-down" data-toggle="collapse" href="#nameRightControl" /></button>
+         <button type="button" class="collapseButton btn btn-default" data-toggle="collapse" href="#nameRightControl" /><span class="glyphicon glyphicon-chevron-down"></span></button>
          <input type="checkbox" id="nameRight" class="switch" />
       </div>
-      <div class="collapse" id="nameRightControl">
+
          <form id="nameRightForm">
             <div class="form-group">
-               <label for="name">Save & Load</label>
+
                <div class="input-group">
                   <span class="input-group-btn">
                      <button class="btn btn-default saveBtn" data-type="nameRight">Save</button>
@@ -151,6 +157,7 @@
                   <!-- /btn-group -->
                </div>
             </div>
+            <div class="collapse" id="nameRightControl">
             <div class="form-group">
                <label for="nameRightIcon">Icon</label>
                <select name='nameRightIcon' class="form-control iconSelect">
@@ -168,7 +175,7 @@
                   <option value='triforce'>Triforce</option>
                   <option value='ea'>EA</option>
                   <option value='ubisoft'>Ubisoft</option>
-                  <option value='pipboy'>Pipboy</option>     
+                  <option value='pipboy'>Pipboy</option>
                </select>
             </div>
             <div class="form-group">
@@ -186,13 +193,12 @@
    <div id="nameBarCenterGroup" class="controlGroup">
       <div class="heading">
          <span class="lead">Name Bar</span>
-         <button type="button" class="collapseButton btn btn-default glyphicon glyphicon-chevron-down" data-toggle="collapse" href="#nameBarControl" /></button>
+         <button type="button" class="collapseButton btn btn-default" data-toggle="collapse" href="#nameBarControl" /><span class="glyphicon glyphicon-chevron-down"></span></button>
          <input type="checkbox" id="nameBar" class="switch" />
       </div>
-      <div class="collapse" id="nameBarControl">
+
          <form id="nameBarForm">
          <div class="form-group">
-               <label for="name">Save & Load</label>
                <div class="input-group">
                   <span class="input-group-btn">
                      <button class="btn btn-default saveBtn" data-type="nameBar">Save</button>
@@ -207,6 +213,7 @@
                   <!-- /btn-group -->
                </div>
             </div>
+            <div class="collapse" id="nameBarControl">
             <div class="form-group">
                <h5> Info bar</h5>
                <input type="text" name="infoBarNameBar" class="form-control" placeholder="Brian Altano" />
@@ -254,7 +261,7 @@
             <div class="form-group">
                <input type="text" name="nBarPerson5Title" class="form-control" placeholder="@agentbizzle" />
             </div>
-            
+
          </form>
       </div>
    </div>
@@ -262,13 +269,12 @@
    <div id="bannerGroup" class="controlGroup">
       <div class="heading">
          <span class="lead">Banner</span>
-         <button type="button" class="collapseButton btn btn-default glyphicon glyphicon-chevron-down" data-toggle="collapse" href="#bannerControl" /></button>
+         <button type="button" class="collapseButton btn btn-default" data-toggle="collapse" href="#bannerControl" /><span class="glyphicon glyphicon-chevron-down"></span></button>
          <input type="checkbox" id="banner" class="switch" />
       </div>
-      <div class="collapse" id="bannerControl">
+
          <form id="bannerForm">
-                     <div class="form-group">
-               <label for="name">Save & Load</label>
+            <div class="form-group">
                <div class="input-group">
                   <span class="input-group-btn">
                      <button class="btn btn-default saveBtn" data-type="banner">Save</button>
@@ -282,6 +288,7 @@
                   <!-- /btn-group -->
                </div>
             </div>
+                  <div class="collapse" id="bannerControl">
             <div class="form-group">
                <label for="bannerIcon">Icon</label>
                <select name='bannerIcon' class="form-control iconSelect">
@@ -299,7 +306,7 @@
                   <option value='triforce'>Triforce</option>
                   <option value='ea'>EA</option>
                   <option value='ubisoft'>Ubisoft</option>
-                  <option value='pipboy'>Pipboy</option>  
+                  <option value='pipboy'>Pipboy</option>
 
                </select>
             </div>
@@ -322,14 +329,12 @@
    <div id="comingUpNextGroup" class="controlGroup">
       <div class="heading">
          <span class="lead">Coming Up Next</span>
-         <button type="button" class="collapseButton btn btn-default glyphicon glyphicon-chevron-down" data-toggle="collapse" href="#comingUpNextControl" /></button>
+         <button type="button" class="collapseButton btn btn-default" data-toggle="collapse" href="#comingUpNextControl" /><span class="glyphicon glyphicon-chevron-down"></span></button>
          <input type="checkbox" id="comingUp" class="switch" />
       </div>
-      <div class="collapse" id="comingUpNextControl">
+
          <form id="comingUpForm">
-         
             <div class="form-group">
-               <label for="name">Save & Load</label>
                <div class="input-group">
                   <span class="input-group-btn">
                      <button class="btn btn-default saveBtn" data-type="comingUp">Save</button>
@@ -343,6 +348,7 @@
                   </div>
                </div>
             </div>
+            <div class="collapse" id="comingUpNextControl">
             <div class="form-group">
                <label for="comingUpIcon">Icon</label>
                <select name='comingUpIcon' class="form-control iconSelect">
@@ -360,7 +366,7 @@
                   <option value='triforce'>Triforce</option>
                   <option value='ea'>EA</option>
                   <option value='ubisoft'>Ubisoft</option>
-                  <option value='pipboy'>Pipboy</option>                      
+                  <option value='pipboy'>Pipboy</option>
                </select>
             </div>
             <div class="form-group">
@@ -378,11 +384,25 @@
    <div id="twitterGroup" class="controlGroup">
       <div class="heading">
          <span class="lead">Twitter Card</span>
-         <button type="button" class="collapseButton btn btn-default glyphicon glyphicon-chevron-down" data-toggle="collapse" href="#twitterCardControl" /></button>
+         <button type="button" class="collapseButton btn btn-default" data-toggle="collapse" href="#twitterCardControl" /><span class="glyphicon glyphicon-chevron-down"></span></button>
          <input type="checkbox" id="tCard" class="switch" />
       </div>
-      <div class="collapse" id="twitterCardControl">
          <form id="twitterForm">
+           <div class="form-group">
+              <div class="input-group">
+                 <span class="input-group-btn">
+                    <button class="btn btn-default saveBtn" data-type="twitter">Save</button>
+                 </span>
+                 <input type="text" class="form-control" name="name" placeholder="save name" />
+                 <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load <span class="caret"></span></button>
+                    <ul id="twitter-select" class="dropdown-menu dropdown-menu-right" role="menu">
+                       <li><a href="#">Microsoft Pre Show</a></li>
+                    </ul>
+                 </div>
+              </div>
+           </div>
+           <div class="collapse" id="twitterCardControl">
             <div class="form-group">
                <label for="tIcon">Icon</label>
                <select name='tIcon' class="form-control iconSelect">
@@ -391,7 +411,7 @@
                   <option value='arrow'>Arrow</option>
                   <option value='arrowRight'>Right Arrow</option>
                   <option value='ex'>!</option>
-                  <option value='avatar'>Avatar</option>  
+                  <option value='avatar'>Avatar</option>
                   <option value='grid'>Grid</option>
                   <option value='mushroom'>Mushroom</option>
                   <option value='xbox'>Xbox</option>
@@ -400,7 +420,7 @@
                   <option value='triforce'>Triforce</option>
                   <option value='ea'>EA</option>
                   <option value='ubisoft'>Ubisoft</option>
-                  <option value='pipboy'>Pipboy</option>     
+                  <option value='pipboy'>Pipboy</option>
                </select>
             </div>
             <div class="form-group">
@@ -419,21 +439,6 @@
                <label for="lowerName">Tweet</label>
                <textarea class="form-control" rows="3" name="twitterContent"></textarea>
             </div>
-            <div class="form-group">
-               <label for="name">Save & Load</label>
-               <div class="input-group">
-                  <span class="input-group-btn">
-                     <button class="btn btn-default saveBtn" data-type="twitter">Save</button>
-                  </span>
-                  <input type="text" class="form-control" name="name" placeholder="save name" />
-                  <div class="input-group-btn">
-                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load <span class="caret"></span></button>
-                     <ul id="twitter-select" class="dropdown-menu dropdown-menu-right" role="menu">
-                        <li><a href="#">Microsoft Pre Show</a></li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
          </form>
       </div>
    </div>
@@ -442,13 +447,12 @@
  <div id="fullSocialGroup" class="controlGroup">
       <div class="heading">
          <span class="lead">Full Screen Social</span>
-         <button type="button" class="collapseButton btn btn-default glyphicon glyphicon-chevron-down" data-toggle="collapse" href="#fullSocialControl" /></button>
+         <button type="button" class="collapseButton btn btn-default" data-toggle="collapse" href="#fullSocialControl" /><span class="glyphicon glyphicon-chevron-down"></span></button>
          <input type="checkbox" id="fullSocial" class="switch" />
       </div>
-      <div class="collapse" id="fullSocialControl">
+
          <form id="fullSocialForm">
          <div class="form-group">
-               <label for="name">Save & Load</label>
                <div class="input-group">
                   <span class="input-group-btn">
                      <button class="btn btn-default saveBtn" data-type="fullSocial">Save</button>
@@ -462,6 +466,7 @@
                   </div>
                </div>
             </div>
+            <div class="collapse" id="fullSocialControl">
             <div class="form-group">
                <label for="fullSocialIcon">Icon</label>
                <select name='fullSocialIcon' class="form-control iconSelect">
@@ -470,7 +475,7 @@
                   <option value='arrow'>Arrow</option>
                   <option value='arrowRight'>Right Arrow</option>
                   <option value='ex'>!</option>
-                  <option value='avatar'>Avatar</option>  
+                  <option value='avatar'>Avatar</option>
                   <option value='grid'>Grid</option>
                   <option value='mushroom'>Mushroom</option>
                   <option value='xbox'>Xbox</option>
@@ -479,7 +484,7 @@
                   <option value='triforce'>Triforce</option>
                   <option value='ea'>EA</option>
                   <option value='ubisoft'>Ubisoft</option>
-                  <option value='pipboy'>Pipboy</option>    
+                  <option value='pipboy'>Pipboy</option>
                </select>
             </div>
             <div class="form-group">
@@ -531,8 +536,8 @@
 <script src='js/jquery.serialize-object.min.js'></script>
 <script src="js/editor.js"></script>
 
-    
-    
-    
+
+
+
   </body>
 </html>
