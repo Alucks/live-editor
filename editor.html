@@ -1,580 +1,608 @@
 <!DOCTYPE html>
 <!-- add 'in' class to collapse to leave it as open  -->
-<html >
-  <head>
-    <meta charset="UTF-8">
+<html>
 
-      <meta name="robots" content="noindex">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <title>IGN Live Graphics Editor</title>
+  <link rel='stylesheet prefetch' href='css/bootstrap.min.css'>
+  <link rel='stylesheet prefetch' href='css/bootstrap-switch.min.css'>
+  <link rel='stylesheet prefetch' href='css/animate.css'>
+  <link rel="stylesheet" href="css/editor.css">
+</head>
 
-    <title>IGN Live Graphics Editor</title>
-
-
-
-   <link rel='stylesheet prefetch' href='css/bootstrap.min.css'>
-   <link rel='stylesheet prefetch' href='css/bootstrap-switch.min.css'>
-   <link rel='stylesheet prefetch' href='css/animate.css'>
-   <link rel="stylesheet" href="css/editor.css">
-
-
-
-
-  </head>
-
-  <body>
-
-    <div id="controller">
-   <div class="pushMenu">
+<body>
+  <div id="controller">
+    <div class="pushMenu">
       <h2>Live Graphics Editor</h2>
       <button type="button" class="btn btn-success btn-sm" id="pushBtn">Push Live</button>
       <button type="button" class="btn btn-danger btn-sm" id="clearBtn">Clear</button>
-   </div>
-   <div id="cBugGroup" class="controlGroup">
+    </div>
+    <div id="cBugGroup" class="controlGroup">
       <div class="heading">
-         <span class="lead">Courtesy Bug</span>
-         <input type="checkbox" id="cBug" class="switch" />
-         <br>
-         <span class="lead secondary">Sponsor Image</span>
-         <input type="checkbox" id="cBugSponsor" class="switch" />
+        <span class="lead">Courtesy Bug</span>
+        <input type="checkbox" id="cBug" class="switch" />
+        <br>
+        <span class="lead secondary">Sponsor Image</span>
+        <input type="checkbox" id="cBugSponsor" class="switch" />
       </div>
       <div class="btn-group">
-         <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load a State <span class="caret"></span></button>
-         <ul id="cBug-select" class="dropdown-menu dropdown-menu-left" role="menu">
-            <li><a href="#">Microsoft Pre Show</a></li>
-         </ul>
+        <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load a State
+          <span class="caret"></span>
+        </button>
+        <ul id="cBug-select" class="dropdown-menu dropdown-menu-left" role="menu">
+          <li><a href="#">Microsoft Pre Show</a></li>
+        </ul>
       </div>
-      <button type="button" class="collapseButton btn btn-default btn-sm" data-toggle="collapse" href="#cBugControl" />Edit Module <span class="glyphicon glyphicon-chevron-down"></span></button>
-         <div class="collapse" id="cBugControl">
-         <form id="cBugForm">
-            <div class="form-group">
+      <button type="button" class="collapseButton btn btn-default btn-sm" data-toggle="collapse" href="#cBugControl" />Edit Module
+      <span class="glyphicon glyphicon-chevron-down"></span>
+      </button>
+      <div class="collapse" id="cBugControl">
+        <form id="cBugForm">
+          <div class="form-group">
             <label for="cBugLines">Single / Double Title Select</label>
             <select name='cBugLines' class="form-control">
-               <option value='doubleTitle'>Both Titles</option>
-               <option value='singleTitle'>Single Title</option>
+              <option value='doubleTitle'>Both Titles</option>
+              <option value='singleTitle'>Single Title</option>
             </select>
+          </div>
+          <div class="form-group">
+            <label for="cBugShow">Show Title</label>
+            <input type="text" name="cBugShow" class="form-control" placeholder="IGN Live E3" />
+          </div>
+          <div class="form-group">
+            <label for="cBugGame">Game Title</label>
+            <input type="text" name="cBugGame" class="form-control" placeholder="Halo 5" />
+          </div>
+          <div class="form-group">
+            <label for="cBugSponsorImage">Sponsor Image URL</label>
+            <input type="text" name="cBugSponsorImage" class="form-control" placeholder="img/name.jpg" />
+          </div>
+          <div class="form-group">
+            <label for="name">Save These Settings</label>
+            <div class="input-group">
+              <input type="text" class="form-control" name="name" placeholder="save name" />
+              <span class="input-group-btn">
+                <button class="btn btn-default saveBtn" data-type="cBug">Save</button>
+              </span>
             </div>
-            <div class="form-group">
-               <label for="cBugShow">Show Title</label>
-               <input type="text" name="cBugShow" class="form-control" placeholder="IGN Live E3" />
-            </div>
-            <div class="form-group">
-               <label for="cBugGame">Game Title</label>
-               <input type="text" name="cBugGame" class="form-control" placeholder="Halo 5" />
-            </div>
-            <div class="form-group">
-               <label for="cBugSponsorImage">Sponsor Image URL</label>
-               <input type="text" name="cBugSponsorImage" class="form-control" placeholder="img/name.jpg" />
-            </div>
-            <div class="form-group">
-               <label for="name">Save These Settings</label>
-               <div class="input-group">
-                  <input type="text" class="form-control" name="name" placeholder="save name" />
-                  <span class="input-group-btn">
-                     <button class="btn btn-default saveBtn" data-type="cBug">Save</button>
-                  </span>
-              </div>
-            </div>
-         </form>
+          </div>
+        </form>
       </div>
-   </div>
+    </div>
 
-   <div id="nameBarleftGroup" class="controlGroup">
+    <div id="nameBarleftGroup" class="controlGroup">
       <div class="heading">
-         <span class="lead">Name - Left</span>
-         <input type="checkbox" id="nameLeft" class="switch" />
+        <span class="lead">Name - Left</span>
+        <input type="checkbox" id="nameLeft" class="switch" />
       </div>
       <div class="btn-group">
-         <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load a State <span class="caret"></span></button>
-         <ul id="nameLeft-select" class="dropdown-menu dropdown-menu-left" role="menu">
-            <li><a href="#">Microsoft Pre Show</a></li>
-         </ul>
+        <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load a State
+          <span class="caret"></span>
+        </button>
+        <ul id="nameLeft-select" class="dropdown-menu dropdown-menu-left" role="menu">
+          <li><a href="#">Microsoft Pre Show</a></li>
+        </ul>
       </div>
-      <button type="button" class="collapseButton btn btn-default btn-sm" data-toggle="collapse" href="#nameLeftControl" />Edit Module <span class="glyphicon glyphicon-chevron-down"></span></button>
+      <button type="button" class="collapseButton btn btn-default btn-sm" data-toggle="collapse" href="#nameLeftControl" />Edit Module
+      <span class="glyphicon glyphicon-chevron-down"></span>
+      </button>
       <div class="collapse" id="nameLeftControl">
-         <form id="nameLeftForm">
-           <div class="form-group">
-               <label for="nameLeftIcon">Icon</label>
-               <select name='nameLeftIcon' class="form-control iconSelect">
-                  <option value='avatar'>Avatar</option>
-                  <option value='arrow'>Arrow</option>
-                  <option value='arrowRight'>Right Arrow</option>
-                  <option value='twitter'>Twitter</option>
-                  <option value='facebook'>Facebook</option>
-                  <option value='grid'>Grid</option>
-                  <option value='ex'>!</option>
-                  <option value='mushroom'>Mushroom</option>
-                  <option value='xbox'>Xbox</option>
-                  <option value='playstation'>Playstation</option>
-                  <option value='ign'>IGN</option>
-                  <option value='triforce'>Triforce</option>
-                  <option value='ea'>EA</option>
-                  <option value='ubisoft'>Ubisoft</option>
-                  <option value='pipboy'>Pipboy</option>
-               </select>
-            </div>
-            <div class="form-group">
-               <label for="nameLeftName">Name</label>
-               <input type="text" name="nameLeftName" class="form-control" placeholder="Brian Altano" />
-            </div>
-            <div class="form-group">
-               <label for="nameLeftHandle">Handle / title</label>
-               <input type="text" name="nameLeftHandle" class="form-control" placeholder="@agentbizzle" />
-            </div>
-            <div class="form-group">
-               <label for="name">Save These Settings</label>
-               <div class="input-group">
-                  <input type="text" class="form-control" name="name" placeholder="save name" />
-                  <span class="input-group-btn">
-                     <button class="btn btn-default saveBtn" data-type="nameLeft">Save</button>
-                  </span>
-               </div>
-            </div>
-         </form>
-      </div>
-   </div>
-
-   <div id="nameBarRightGroup" class="controlGroup">
-      <div class="heading">
-         <span class="lead">Name - Right</span>
-         <input type="checkbox" id="nameRight" class="switch" />
-      </div>
-      <div class="btn-group">
-         <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load a State <span class="caret"></span></button>
-         <ul id="nameRight-select" class="dropdown-menu dropdown-menu-left" role="menu">
-            <li><a href="#">Microsoft Pre Show</a></li>
-         </ul>
-      </div>
-       <button type="button" class="collapseButton btn btn-default btn-sm" data-toggle="collapse" href="#nameRightControl" />Edit Module <span class="glyphicon glyphicon-chevron-down"></span></button>
-         <div class="collapse" id="nameRightControl">
-         <form id="nameRightForm">
-            <div class="form-group">
-               <label for="nameRightIcon">Icon</label>
-               <select name='nameRightIcon' class="form-control iconSelect">
-                  <option value='avatar'>Avatar</option>
-                  <option value='arrow'>Arrow</option>
-                  <option value='arrowRight'>Right Arrow</option>
-                  <option value='twitter'>Twitter</option>
-                  <option value='facebook'>Facebook</option>
-                  <option value='grid'>Grid</option>
-                  <option value='ex'>!</option>
-                  <option value='mushroom'>Mushroom</option>
-                  <option value='xbox'>Xbox</option>
-                  <option value='playstation'>Playstation</option>
-                  <option value='ign'>IGN</option>
-                  <option value='triforce'>Triforce</option>
-                  <option value='ea'>EA</option>
-                  <option value='ubisoft'>Ubisoft</option>
-                  <option value='pipboy'>Pipboy</option>
-               </select>
-            </div>
-            <div class="form-group">
-               <label for="nameRightName">Name</label>
-               <input type="text" name="nameRightName" class="form-control" placeholder="Brian Altano" />
-            </div>
-            <div class="form-group">
-               <label for="nameRightHandle">Handle / title</label>
-               <input type="text" name="nameRightHandle" class="form-control" placeholder="@agentbizzle" />
-            </div>
-            <div class="form-group">
-               <label for="name">Save These Settings</label>
-               <div class="input-group">
-                 <input type="text" class="form-control" name="name" placeholder="save name" />
-                  <span class="input-group-btn">
-                     <button class="btn btn-default saveBtn" data-type="nameRight">Save</button>
-                  </span>
-               </div>
-            </div>
-         </form>
-      </div>
-   </div>
-
-   <div id="nameBarCenterGroup" class="controlGroup">
-      <div class="heading">
-         <span class="lead">Name Bar</span>
-         <input type="checkbox" id="nameBar" class="switch" />
-      </div>
-      <div class="btn-group">
-         <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load a State <span class="caret"></span></button>
-         <ul id="nameBar-select" class="dropdown-menu dropdown-menu-left" role="menu">
-            <li><a href="#">Microsoft Pre Show</a></li>
-         </ul>
-      </div>
-      <button type="button" class="collapseButton btn btn-default btn-sm" data-toggle="collapse" href="#nameBarControl" />Edit Module <span class="glyphicon glyphicon-chevron-down"></span></button>
-         <div class="collapse" id="nameBarControl">
-         <form id="nameBarForm">
-            <div class="form-group">
-               <h5> Info bar</h5>
-               <input type="text" name="infoBarNameBar" class="form-control" placeholder="Brian Altano" />
-            </div>
-            <label for="nameBarNumber">Number of People</label>
-            <select name='nameBarNumber' class="form-control">
-               <option value='nameBar1'>1 Person</option>
-               <option value='nameBar2'>2 People</option>
-               <option value='nameBar3'>3 People</option>
-               <option value='nameBar4'>4 People</option>
-               <option value='nameBar5'>5 People</option>
+        <form id="nameLeftForm">
+          <div class="form-group">
+            <label for="nameLeftIcon">Icon</label>
+            <select name='nameLeftIcon' class="form-control iconSelect">
+              <option value='avatar'>Avatar</option>
+              <option value='arrow'>Arrow</option>
+              <option value='arrowRight'>Right Arrow</option>
+              <option value='twitter'>Twitter</option>
+              <option value='facebook'>Facebook</option>
+              <option value='grid'>Grid</option>
+              <option value='ex'>!</option>
+              <option value='mushroom'>Mushroom</option>
+              <option value='xbox'>Xbox</option>
+              <option value='playstation'>Playstation</option>
+              <option value='ign'>IGN</option>
+              <option value='triforce'>Triforce</option>
+              <option value='ea'>EA</option>
+              <option value='ubisoft'>Ubisoft</option>
+              <option value='pipboy'>Pipboy</option>
             </select>
-            <div class="form-group">
-               <h5>Person 1</h5>
-               <input type="text" name="nBarPerson1Name" class="form-control" placeholder="Brian Altano" />
+          </div>
+          <div class="form-group">
+            <label for="nameLeftName">Name</label>
+            <input type="text" name="nameLeftName" class="form-control" placeholder="Brian Altano" />
+          </div>
+          <div class="form-group">
+            <label for="nameLeftHandle">Handle / title</label>
+            <input type="text" name="nameLeftHandle" class="form-control" placeholder="@agentbizzle" />
+          </div>
+          <div class="form-group">
+            <label for="name">Save These Settings</label>
+            <div class="input-group">
+              <input type="text" class="form-control" name="name" placeholder="save name" />
+              <span class="input-group-btn">
+                <button class="btn btn-default saveBtn" data-type="nameLeft">Save</button>
+              </span>
             </div>
-            <div class="form-group">
-               <input type="text" name="nBarPerson1Title" class="form-control" placeholder="@agentbizzle" />
-            </div>
-            <div class="form-group">
-               <h5>Person 2</h5>
-               <input type="text" name="nBarPerson2Name" class="form-control" placeholder="Brian Altano" />
-            </div>
-            <div class="form-group">
-               <input type="text" name="nBarPerson2Title" class="form-control" placeholder="@agentbizzle" />
-            </div>
-            <div class="form-group">
-               <h5>Person 3</h5>
-               <input type="text" name="nBarPerson3Name" class="form-control" placeholder="Brian Altano" />
-            </div>
-            <div class="form-group">
-               <input type="text" name="nBarPerson3Title" class="form-control" placeholder="@agentbizzle" />
-            </div>
-            <div class="form-group">
-               <h5>Person 4</h5>
-               <input type="text" name="nBarPerson4Name" class="form-control" placeholder="Brian Altano" />
-            </div>
-            <div class="form-group">
-               <input type="text" name="nBarPerson4Title" class="form-control" placeholder="@agentbizzle" />
-            </div>
-            <div class="form-group">
-               <h5>Person 5</h5>
-               <input type="text" name="nBarPerson5Name" class="form-control" placeholder="Brian Altano" />
-            </div>
-            <div class="form-group">
-               <input type="text" name="nBarPerson5Title" class="form-control" placeholder="@agentbizzle" />
-            </div>
-            <div class="form-group">
-                  <label for="name">Save These Settings</label>
-                  <div class="input-group">
-                     <input type="text" class="form-control" name="name" placeholder="save name" />
-                     <span class="input-group-btn">
-                        <button class="btn btn-default saveBtn" data-type="nameBar">Save</button>
-                     </span>
-                  </div>
-            </div>
-         </form>
+          </div>
+        </form>
       </div>
-   </div>
+    </div>
 
-   <div id="bannerGroup" class="controlGroup">
+    <div id="nameBarRightGroup" class="controlGroup">
       <div class="heading">
-         <span class="lead">Banner</span>
-         <input type="checkbox" id="banner" class="switch" />
+        <span class="lead">Name - Right</span>
+        <input type="checkbox" id="nameRight" class="switch" />
       </div>
       <div class="btn-group">
-         <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load a State <span class="caret"></span></button>
-         <ul id="banner-select" class="dropdown-menu dropdown-menu-left" role="menu">
-            <li><a href="#">Microsoft Pre Show</a></li>
-         </ul>
+        <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load a State
+          <span class="caret"></span>
+        </button>
+        <ul id="nameRight-select" class="dropdown-menu dropdown-menu-left" role="menu">
+          <li><a href="#">Microsoft Pre Show</a></li>
+        </ul>
       </div>
-      <button type="button" class="collapseButton btn btn-default btn-sm" data-toggle="collapse" href="#bannerControl" />Edit Module <span class="glyphicon glyphicon-chevron-down"></span></button>
+      <button type="button" class="collapseButton btn btn-default btn-sm" data-toggle="collapse" href="#nameRightControl" />Edit Module
+      <span class="glyphicon glyphicon-chevron-down"></span>
+      </button>
+      <div class="collapse" id="nameRightControl">
+        <form id="nameRightForm">
+          <div class="form-group">
+            <label for="nameRightIcon">Icon</label>
+            <select name='nameRightIcon' class="form-control iconSelect">
+              <option value='avatar'>Avatar</option>
+              <option value='arrow'>Arrow</option>
+              <option value='arrowRight'>Right Arrow</option>
+              <option value='twitter'>Twitter</option>
+              <option value='facebook'>Facebook</option>
+              <option value='grid'>Grid</option>
+              <option value='ex'>!</option>
+              <option value='mushroom'>Mushroom</option>
+              <option value='xbox'>Xbox</option>
+              <option value='playstation'>Playstation</option>
+              <option value='ign'>IGN</option>
+              <option value='triforce'>Triforce</option>
+              <option value='ea'>EA</option>
+              <option value='ubisoft'>Ubisoft</option>
+              <option value='pipboy'>Pipboy</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="nameRightName">Name</label>
+            <input type="text" name="nameRightName" class="form-control" placeholder="Brian Altano" />
+          </div>
+          <div class="form-group">
+            <label for="nameRightHandle">Handle / title</label>
+            <input type="text" name="nameRightHandle" class="form-control" placeholder="@agentbizzle" />
+          </div>
+          <div class="form-group">
+            <label for="name">Save These Settings</label>
+            <div class="input-group">
+              <input type="text" class="form-control" name="name" placeholder="save name" />
+              <span class="input-group-btn">
+                <button class="btn btn-default saveBtn" data-type="nameRight">Save</button>
+              </span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="nameBarCenterGroup" class="controlGroup">
+      <div class="heading">
+        <span class="lead">Name Bar</span>
+        <input type="checkbox" id="nameBar" class="switch" />
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load a State
+          <span class="caret"></span>
+        </button>
+        <ul id="nameBar-select" class="dropdown-menu dropdown-menu-left" role="menu">
+          <li><a href="#">Microsoft Pre Show</a></li>
+        </ul>
+      </div>
+      <button type="button" class="collapseButton btn btn-default btn-sm" data-toggle="collapse" href="#nameBarControl" />Edit Module
+      <span class="glyphicon glyphicon-chevron-down"></span>
+      </button>
+      <div class="collapse" id="nameBarControl">
+        <form id="nameBarForm">
+          <div class="form-group">
+            <h5> Info bar</h5>
+            <input type="text" name="infoBarNameBar" class="form-control" placeholder="Brian Altano" />
+          </div>
+          <label for="nameBarNumber">Number of People</label>
+          <select name='nameBarNumber' class="form-control">
+            <option value='nameBar1'>1 Person</option>
+            <option value='nameBar2'>2 People</option>
+            <option value='nameBar3'>3 People</option>
+            <option value='nameBar4'>4 People</option>
+            <option value='nameBar5'>5 People</option>
+          </select>
+          <div class="form-group">
+            <h5>Person 1</h5>
+            <input type="text" name="nBarPerson1Name" class="form-control" placeholder="Brian Altano" />
+          </div>
+          <div class="form-group">
+            <input type="text" name="nBarPerson1Title" class="form-control" placeholder="@agentbizzle" />
+          </div>
+          <div class="form-group">
+            <h5>Person 2</h5>
+            <input type="text" name="nBarPerson2Name" class="form-control" placeholder="Brian Altano" />
+          </div>
+          <div class="form-group">
+            <input type="text" name="nBarPerson2Title" class="form-control" placeholder="@agentbizzle" />
+          </div>
+          <div class="form-group">
+            <h5>Person 3</h5>
+            <input type="text" name="nBarPerson3Name" class="form-control" placeholder="Brian Altano" />
+          </div>
+          <div class="form-group">
+            <input type="text" name="nBarPerson3Title" class="form-control" placeholder="@agentbizzle" />
+          </div>
+          <div class="form-group">
+            <h5>Person 4</h5>
+            <input type="text" name="nBarPerson4Name" class="form-control" placeholder="Brian Altano" />
+          </div>
+          <div class="form-group">
+            <input type="text" name="nBarPerson4Title" class="form-control" placeholder="@agentbizzle" />
+          </div>
+          <div class="form-group">
+            <h5>Person 5</h5>
+            <input type="text" name="nBarPerson5Name" class="form-control" placeholder="Brian Altano" />
+          </div>
+          <div class="form-group">
+            <input type="text" name="nBarPerson5Title" class="form-control" placeholder="@agentbizzle" />
+          </div>
+          <div class="form-group">
+            <label for="name">Save These Settings</label>
+            <div class="input-group">
+              <input type="text" class="form-control" name="name" placeholder="save name" />
+              <span class="input-group-btn">
+                <button class="btn btn-default saveBtn" data-type="nameBar">Save</button>
+              </span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="bannerGroup" class="controlGroup">
+      <div class="heading">
+        <span class="lead">Banner</span>
+        <input type="checkbox" id="banner" class="switch" />
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load a State
+          <span class="caret"></span>
+        </button>
+        <ul id="banner-select" class="dropdown-menu dropdown-menu-left" role="menu">
+          <li><a href="#">Microsoft Pre Show</a></li>
+        </ul>
+      </div>
+      <button type="button" class="collapseButton btn btn-default btn-sm" data-toggle="collapse" href="#bannerControl" />Edit Module
+      <span class="glyphicon glyphicon-chevron-down"></span>
+      </button>
       <div class="collapse" id="bannerControl">
-         <form id="bannerForm">
-            <div class="form-group">
-               <label for="bannerIcon">Icon</label>
-               <select name='bannerIcon' class="form-control iconSelect">
-                  <option value='ex'>!</option>
-                  <option value='arrow'>Arrow</option>
-                  <option value='arrowRight'>Right Arrow</option>
-                  <option value='avatar'>Avatar</option>
-                  <option value='twitter'>Twitter</option>
-                  <option value='facebook'>Facebook</option>
-                  <option value='grid'>Grid</option>
-                  <option value='mushroom'>Mushroom</option>
-                  <option value='xbox'>Xbox</option>
-                  <option value='playstation'>Playstation</option>
-                  <option value='ign'>IGN</option>
-                  <option value='triforce'>Triforce</option>
-                  <option value='ea'>EA</option>
-                  <option value='ubisoft'>Ubisoft</option>
-                  <option value='pipboy'>Pipboy</option>
+        <form id="bannerForm">
+          <div class="form-group">
+            <label for="bannerIcon">Icon</label>
+            <select name='bannerIcon' class="form-control iconSelect">
+              <option value='ex'>!</option>
+              <option value='arrow'>Arrow</option>
+              <option value='arrowRight'>Right Arrow</option>
+              <option value='avatar'>Avatar</option>
+              <option value='twitter'>Twitter</option>
+              <option value='facebook'>Facebook</option>
+              <option value='grid'>Grid</option>
+              <option value='mushroom'>Mushroom</option>
+              <option value='xbox'>Xbox</option>
+              <option value='playstation'>Playstation</option>
+              <option value='ign'>IGN</option>
+              <option value='triforce'>Triforce</option>
+              <option value='ea'>EA</option>
+              <option value='ubisoft'>Ubisoft</option>
+              <option value='pipboy'>Pipboy</option>
 
-               </select>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="bannerTitle">title</label>
+            <input type="text" name="bannerTitle" class="form-control" placeholder="Square Enix Announces Press..." />
+          </div>
+          <div class="form-group">
+            <label for="bannerSub">Sub Title</label>
+            <input type="text" name="bannerSub" class="form-control" placeholder="Bring on the announcements!" />
+          </div>
+          <div class="form-group">
+            <label for="lowerHandle">Info Bar</label>
+            <input type="text" name="infoBarBanner" class="form-control" placeholder="News From E3" />
+          </div>
+          <div class="form-group">
+            <label for="name">Save These Settings</label>
+            <div class="input-group">
+              <input type="text" class="form-control" name="name" placeholder="save name" />
+              <span class="input-group-btn">
+                <button class="btn btn-default saveBtn" data-type="banner">Save</button>
+              </span>
             </div>
-            <div class="form-group">
-               <label for="bannerTitle">title</label>
-               <input type="text" name="bannerTitle" class="form-control" placeholder="Square Enix Announces Press..." />
-            </div>
-            <div class="form-group">
-               <label for="bannerSub">Sub Title</label>
-               <input type="text" name="bannerSub" class="form-control" placeholder="Bring on the announcements!" />
-            </div>
-            <div class="form-group">
-               <label for="lowerHandle">Info Bar</label>
-               <input type="text" name="infoBarBanner" class="form-control" placeholder="News From E3" />
-            </div>
-            <div class="form-group">
-               <label for="name">Save These Settings</label>
-               <div class="input-group">
-                  <input type="text" class="form-control" name="name" placeholder="save name" />
-                  <span class="input-group-btn">
-                     <button class="btn btn-default saveBtn" data-type="banner">Save</button>
-                  </span>
-               </div>
-            </div>
-         </form>
+          </div>
+        </form>
       </div>
-   </div>
-   <div id="comingUpNextGroup" class="controlGroup">
+    </div>
+    <div id="comingUpNextGroup" class="controlGroup">
       <div class="heading">
-         <span class="lead">Coming Up Next</span>
-         <input type="checkbox" id="comingUp" class="switch" />
+        <span class="lead">Coming Up Next</span>
+        <input type="checkbox" id="comingUp" class="switch" />
       </div>
       <div class="btn-group">
-         <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load a State <span class="caret"></span></button>
-         <ul id="comingUp-select" class="dropdown-menu dropdown-menu-left" role="menu">
-            <li><a href="#">Microsoft Pre Show</a></li>
-         </ul>
+        <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load a State
+          <span class="caret"></span>
+        </button>
+        <ul id="comingUp-select" class="dropdown-menu dropdown-menu-left" role="menu">
+          <li><a href="#">Microsoft Pre Show</a></li>
+        </ul>
       </div>
-      <button type="button" class="collapseButton btn btn-default btn-sm" data-toggle="collapse" href="#comingUpNextControl" />Edit Module <span class="glyphicon glyphicon-chevron-down"></span></button>
-         <form id="comingUpForm">
-            <div class="collapse" id="comingUpNextControl">
-            <div class="form-group">
-               <label for="comingUpIcon">Icon</label>
-               <select name='comingUpIcon' class="form-control iconSelect">
-                  <option value='arrow'>Arrow</option>
-                  <option value='arrowRight'>Right Arrow</option>
-                  <option value='ex'>!</option>
-                  <option value='avatar'>Avatar</option>
-                  <option value='twitter'>Twitter</option>
-                  <option value='facebook'>Facebook</option>
-                  <option value='grid'>Grid</option>
-                  <option value='mushroom'>Mushroom</option>
-                  <option value='xbox'>Xbox</option>
-                  <option value='playstation'>Playstation</option>
-                  <option value='ign'>IGN</option>
-                  <option value='triforce'>Triforce</option>
-                  <option value='ea'>EA</option>
-                  <option value='ubisoft'>Ubisoft</option>
-                  <option value='pipboy'>Pipboy</option>
-               </select>
+      <button type="button" class="collapseButton btn btn-default btn-sm" data-toggle="collapse" href="#comingUpNextControl" />Edit Module
+      <span class="glyphicon glyphicon-chevron-down"></span>
+      </button>
+      <form id="comingUpForm">
+        <div class="collapse" id="comingUpNextControl">
+          <div class="form-group">
+            <label for="comingUpIcon">Icon</label>
+            <select name='comingUpIcon' class="form-control iconSelect">
+              <option value='arrow'>Arrow</option>
+              <option value='arrowRight'>Right Arrow</option>
+              <option value='ex'>!</option>
+              <option value='avatar'>Avatar</option>
+              <option value='twitter'>Twitter</option>
+              <option value='facebook'>Facebook</option>
+              <option value='grid'>Grid</option>
+              <option value='mushroom'>Mushroom</option>
+              <option value='xbox'>Xbox</option>
+              <option value='playstation'>Playstation</option>
+              <option value='ign'>IGN</option>
+              <option value='triforce'>Triforce</option>
+              <option value='ea'>EA</option>
+              <option value='ubisoft'>Ubisoft</option>
+              <option value='pipboy'>Pipboy</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="comingUpTitle">Program Title</label>
+            <input type="text" name="comingUpTitle" class="form-control" placeholder="8 PM" />
+          </div>
+          <div class="form-group">
+            <label for="infoBarComingUp">Time</label>
+            <input type="text" name="infoBarComingUp" class="form-control" placeholder=" Coming Up @ 8 PM PST" />
+          </div>
+          <div class="form-group">
+            <label for="name">Save These Settings</label>
+            <div class="input-group">
+              <input type="text" class="form-control" name="name" placeholder="save name" />
+              <span class="input-group-btn">
+                <button class="btn btn-default saveBtn" data-type="comingUp">Save</button>
+              </span>
             </div>
-            <div class="form-group">
-               <label for="comingUpTitle">Program Title</label>
-               <input type="text" name="comingUpTitle" class="form-control" placeholder="8 PM" />
-            </div>
-            <div class="form-group">
-               <label for="infoBarComingUp">Time</label>
-               <input type="text" name="infoBarComingUp" class="form-control" placeholder=" Coming Up @ 8 PM PST" />
-            </div>
-            <div class="form-group">
-               <label for="name">Save These Settings</label>
-               <div class="input-group">
-                 <input type="text" class="form-control" name="name" placeholder="save name" />
-                  <span class="input-group-btn">
-                     <button class="btn btn-default saveBtn" data-type="comingUp">Save</button>
-                  </span>
-               </div>
-            </div>
-         </form>
+          </div>
+      </form>
       </div>
-   </div>
+    </div>
 
-   <div id="twitterGroup" class="controlGroup">
+    <div id="twitterGroup" class="controlGroup">
       <div class="heading">
-         <span class="lead">Twitter Card</span>
-         <input type="checkbox" id="tCard" class="switch" />
+        <span class="lead">Twitter Card</span>
+        <input type="checkbox" id="tCard" class="switch" />
       </div>
       <div class="btn-group">
-         <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load a State <span class="caret"></span></button>
-         <ul id="twitter-select" class="dropdown-menu dropdown-menu-left" role="menu">
-            <li><a href="#">Microsoft Pre Show</a></li>
-         </ul>
+        <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load a State
+          <span class="caret"></span>
+        </button>
+        <ul id="twitter-select" class="dropdown-menu dropdown-menu-left" role="menu">
+          <li><a href="#">Microsoft Pre Show</a></li>
+        </ul>
       </div>
-      <button type="button" class="collapseButton btn btn-default btn-sm" data-toggle="collapse" href="#twitterCardControl" />Edit Module <span class="glyphicon glyphicon-chevron-down"></span></button>
-         <div class="collapse" id="twitterCardControl">
-         <form id="twitterForm">
-            <div class="form-group">
-               <label for="tIcon">Icon</label>
-               <select name='tIcon' class="form-control iconSelect">
-                  <option value='twitter'>Twitter</option>
-                  <option value='facebook'>Facebook</option>
-                  <option value='arrow'>Arrow</option>
-                  <option value='arrowRight'>Right Arrow</option>
-                  <option value='ex'>!</option>
-                  <option value='avatar'>Avatar</option>
-                  <option value='grid'>Grid</option>
-                  <option value='mushroom'>Mushroom</option>
-                  <option value='xbox'>Xbox</option>
-                  <option value='playstation'>Playstation</option>
-                  <option value='ign'>IGN</option>
-                  <option value='triforce'>Triforce</option>
-                  <option value='ea'>EA</option>
-                  <option value='ubisoft'>Ubisoft</option>
-                  <option value='pipboy'>Pipboy</option>
-               </select>
+      <button type="button" class="collapseButton btn btn-default btn-sm" data-toggle="collapse" href="#twitterCardControl" />Edit Module
+      <span class="glyphicon glyphicon-chevron-down"></span>
+      </button>
+      <div class="collapse" id="twitterCardControl">
+        <form id="twitterForm">
+          <div class="form-group">
+            <label for="tIcon">Icon</label>
+            <select name='tIcon' class="form-control iconSelect">
+              <option value='twitter'>Twitter</option>
+              <option value='facebook'>Facebook</option>
+              <option value='arrow'>Arrow</option>
+              <option value='arrowRight'>Right Arrow</option>
+              <option value='ex'>!</option>
+              <option value='avatar'>Avatar</option>
+              <option value='grid'>Grid</option>
+              <option value='mushroom'>Mushroom</option>
+              <option value='xbox'>Xbox</option>
+              <option value='playstation'>Playstation</option>
+              <option value='ign'>IGN</option>
+              <option value='triforce'>Triforce</option>
+              <option value='ea'>EA</option>
+              <option value='ubisoft'>Ubisoft</option>
+              <option value='pipboy'>Pipboy</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="infoBarTwitter">Info Bar</label>
+            <input type="text" name="infoBarTwitter" class="form-control" placeholder="from Twitter" />
+          </div>
+          <div class="form-group">
+            <label for="lowerHandle">Name</label>
+            <input type="text" name="tName" class="form-control" placeholder="Adam" />
+          </div>
+          <div class="form-group">
+            <label for="lowerHandle">Twitter Handle</label>
+            <input type="text" name="tHandle" class="form-control" placeholder="@Adam" />
+          </div>
+          <div class="form-group">
+            <label for="lowerName">Tweet</label>
+            <textarea class="form-control" rows="3" name="twitterContent"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="name">Save These Settings</label>
+            <div class="input-group">
+              <span class="input-group-btn">
+                <button class="btn btn-default saveBtn" data-type="twitter">Save</button>
+              </span>
+              <input type="text" class="form-control" name="name" placeholder="save name" />
             </div>
-            <div class="form-group">
-               <label for="infoBarTwitter">Info Bar</label>
-               <input type="text" name="infoBarTwitter" class="form-control" placeholder="from Twitter" />
-            </div>
-            <div class="form-group">
-               <label for="lowerHandle">Name</label>
-               <input type="text" name="tName" class="form-control" placeholder="Adam" />
-            </div>
-            <div class="form-group">
-               <label for="lowerHandle">Twitter Handle</label>
-               <input type="text" name="tHandle" class="form-control" placeholder="@Adam" />
-            </div>
-            <div class="form-group">
-               <label for="lowerName">Tweet</label>
-               <textarea class="form-control" rows="3" name="twitterContent"></textarea>
-            </div>
-            <div class="form-group">
-              <label for="name">Save These Settings</label>
-               <div class="input-group">
-                  <span class="input-group-btn">
-                     <button class="btn btn-default saveBtn" data-type="twitter">Save</button>
-                  </span>
-                  <input type="text" class="form-control" name="name" placeholder="save name" />
-               </div>
-            </div>
-         </form>
+          </div>
+        </form>
       </div>
-   </div>
+    </div>
 
 
- <div id="fullSocialGroup" class="controlGroup">
+    <div id="fullSocialGroup" class="controlGroup">
       <div class="heading">
-         <span class="lead">Full Screen Social</span>
-         <input type="checkbox" id="fullSocial" class="switch" />
+        <span class="lead">Full Screen Social</span>
+        <input type="checkbox" id="fullSocial" class="switch" />
       </div>
       <div class="btn-group">
-         <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load a State <span class="caret"></span></button>
-         <ul id="fullSocial-select" class="dropdown-menu dropdown-menu-left" role="menu">
-            <li><a href="#">Microsoft Pre Show</a></li>
-         </ul>
+        <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load a State
+          <span class="caret"></span>
+        </button>
+        <ul id="fullSocial-select" class="dropdown-menu dropdown-menu-left" role="menu">
+          <li><a href="#">Microsoft Pre Show</a></li>
+        </ul>
       </div>
-      <button type="button" class="collapseButton btn btn-default btn-sm" data-toggle="collapse" href="#fullSocialControl" />Edit Module <span class="glyphicon glyphicon-chevron-down"></span></button>
+      <button type="button" class="collapseButton btn btn-default btn-sm" data-toggle="collapse" href="#fullSocialControl" />Edit Module
+      <span class="glyphicon glyphicon-chevron-down"></span>
+      </button>
       <div class="collapse" id="fullSocialControl">
-         <form id="fullSocialForm">
-            <div class="form-group">
-               <label for="fullSocialIcon">Icon</label>
-               <select name='fullSocialIcon' class="form-control iconSelect">
-                  <option value='twitter'>Twitter</option>
-                  <option value='facebook'>Facebook</option>
-                  <option value='arrow'>Arrow</option>
-                  <option value='arrowRight'>Right Arrow</option>
-                  <option value='ex'>!</option>
-                  <option value='avatar'>Avatar</option>
-                  <option value='grid'>Grid</option>
-                  <option value='mushroom'>Mushroom</option>
-                  <option value='xbox'>Xbox</option>
-                  <option value='playstation'>Playstation</option>
-                  <option value='ign'>IGN</option>
-                  <option value='triforce'>Triforce</option>
-                  <option value='ea'>EA</option>
-                  <option value='ubisoft'>Ubisoft</option>
-                  <option value='pipboy'>Pipboy</option>
-               </select>
+        <form id="fullSocialForm">
+          <div class="form-group">
+            <label for="fullSocialIcon">Icon</label>
+            <select name='fullSocialIcon' class="form-control iconSelect">
+              <option value='twitter'>Twitter</option>
+              <option value='facebook'>Facebook</option>
+              <option value='arrow'>Arrow</option>
+              <option value='arrowRight'>Right Arrow</option>
+              <option value='ex'>!</option>
+              <option value='avatar'>Avatar</option>
+              <option value='grid'>Grid</option>
+              <option value='mushroom'>Mushroom</option>
+              <option value='xbox'>Xbox</option>
+              <option value='playstation'>Playstation</option>
+              <option value='ign'>IGN</option>
+              <option value='triforce'>Triforce</option>
+              <option value='ea'>EA</option>
+              <option value='ubisoft'>Ubisoft</option>
+              <option value='pipboy'>Pipboy</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="cardName">Name</label>
+            <input type="text" name="cardName" class="form-control" placeholder="Adam" />
+          </div>
+          <div class="form-group">
+            <label for="cardHandle">Handle</label>
+            <input type="text" name="cardHandle" class="form-control" placeholder="@Adam" />
+          </div>
+          <div class="form-group">
+            <label for="lowerName">Post / Tweet Content</label>
+            <textarea class="form-control" rows="3" name="cardBody"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="cardInfo1">Social Network Name</label>
+            <input type="text" name="cardInfo1" class="form-control" placeholder="Via twitter" />
+          </div>
+          <div class="form-group">
+            <label for="cardInfo2">Event</label>
+            <input type="text" name="cardInfo2" class="form-control" placeholder="ign e3 2015" />
+          </div>
+          <div class="form-group">
+            <label for="fullSocialBg">Background Image URL</label>
+            <input type="text" name="fullSocialBg" class="form-control" placeholder="img/name.jpg" />
+          </div>
+          <div class="form-group">
+            <label for="name">Save These Settings</label>
+            <div class="input-group">
+              <span class="input-group-btn">
+                <button class="btn btn-default saveBtn" data-type="fullSocial">Save</button>
+              </span>
+              <input type="text" class="form-control" name="name" placeholder="save name" />
             </div>
-            <div class="form-group">
-               <label for="cardName">Name</label>
-               <input type="text" name="cardName" class="form-control" placeholder="Adam" />
-            </div>
-            <div class="form-group">
-               <label for="cardHandle">Handle</label>
-               <input type="text" name="cardHandle" class="form-control" placeholder="@Adam" />
-            </div>
-            <div class="form-group">
-               <label for="lowerName">Post / Tweet Content</label>
-               <textarea class="form-control" rows="3" name="cardBody"></textarea>
-            </div>
-            <div class="form-group">
-               <label for="cardInfo1">Social Network Name</label>
-               <input type="text" name="cardInfo1" class="form-control" placeholder="Via twitter" />
-            </div>
-            <div class="form-group">
-               <label for="cardInfo2">Event</label>
-               <input type="text" name="cardInfo2" class="form-control" placeholder="ign e3 2015" />
-            </div>
-            <div class="form-group">
-               <label for="fullSocialBg">Background Image URL</label>
-               <input type="text" name="fullSocialBg" class="form-control" placeholder="img/name.jpg" />
-            </div>
-            <div class="form-group">
-              <label for="name">Save These Settings</label>
-              <div class="input-group">
-                     <span class="input-group-btn">
-                        <button class="btn btn-default saveBtn" data-type="fullSocial">Save</button>
-                     </span>
-                     <input type="text" class="form-control" name="name" placeholder="save name" />
-               </div>
-             </div>
-         </form>
+          </div>
+        </form>
       </div>
-   </div>
+    </div>
 
-   <div id="scheduleGroup" class="controlGroup">
-        <div class="heading">
-           <span class="lead">Schedule</span>
-           <input type="checkbox" id="schedule" class="switch" />
-           <br>
-        </div>
-        <div class="btn-group">
-           <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load a State <span class="caret"></span></button>
-           <ul id="schedule-select" class="dropdown-menu dropdown-menu-left" role="menu">
-              <li><a href="#">Microsoft Pre Show</a></li>
-           </ul>
-        </div>
-        <select id="scheduleScreenSelect"class="form-control">
+    <div id="scheduleGroup" class="controlGroup">
+      <div class="heading">
+        <span class="lead">Schedule</span>
+        <input type="checkbox" id="schedule" class="switch" />
+        <br>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Load a State
+          <span class="caret"></span>
+        </button>
+        <ul id="schedule-select" class="dropdown-menu dropdown-menu-left" role="menu">
+          <li><a href="#">Microsoft Pre Show</a></li>
+        </ul>
+      </div>
+      <select id="scheduleScreenSelect" class="form-control">
         <option>Screen 1</option>
         <option>Screen 2</option>
         <option>Screen 3</option>
         <option>Screen 4</option>
         <option>Screen 5</option>
-        </select>
-        <button type="button" class="collapseButton btn btn-default btn-sm" data-toggle="collapse" href="#scheduleControl" />Edit Module <span class="glyphicon glyphicon-chevron-down"></span></button>
-        <div class="collapse" id="scheduleControl">
-           <form id="scheduleForm">
-              <div class="form-group">
-                 <label for="scheduleOne">Schedule Frame One</label>
-                 <input type="text" name="scheduleOne" class="form-control" placeholder="img/name.jpg" />
-              </div>
-              <div class="form-group">
-                 <label for="scheduleBg">Background Image URL</label>
-                 <input type="text" name="fullSocialBg" class="form-control" placeholder="img/name.jpg" />
-              </div>
-              <div class="form-group">
-                <label for="name">Save These Settings</label>
-                <div class="input-group">
-                       <span class="input-group-btn">
-                          <button class="btn btn-default saveBtn" data-type="fullSocial">Save</button>
-                       </span>
-                       <input type="text" class="form-control" name="name" placeholder="save name" />
-                 </div>
-               </div>
-           </form>
-        </div>
-     </div>
+      </select>
+      <button type="button" class="collapseButton btn btn-default btn-sm" data-toggle="collapse" href="#scheduleControl" />Edit Module
+      <span class="glyphicon glyphicon-chevron-down"></span>
+      </button>
+      <div class="collapse" id="scheduleControl">
+        <form id="scheduleForm">
+          <div class="form-group">
+            <label for="scheduleOne">Schedule Frame One</label>
+            <input type="text" name="scheduleOne" class="form-control" placeholder="img/name.jpg" />
+          </div>
+          <div class="form-group">
+            <label for="scheduleBg">Background Image URL</label>
+            <input type="text" name="fullSocialBg" class="form-control" placeholder="img/name.jpg" />
+          </div>
+          <div class="form-group">
+            <label for="name">Save These Settings</label>
+            <div class="input-group">
+              <span class="input-group-btn">
+                <button class="btn btn-default saveBtn" data-type="fullSocial">Save</button>
+              </span>
+              <input type="text" class="form-control" name="name" placeholder="save name" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
 
-   <!-- /Show Saver group -->
-   <div class="controlGroup">
-    <h4>Show Data</h4>
+    <!-- /Show Saver group -->
+    <div class="controlGroup">
+      <h4>Show Data</h4>
       <button id="importer" type="submit" class="btn btn-default">Import State</button>
       <button id="exporter" type="submit" class="btn btn-default">Export State</button>
       <br />
       <br />
       <textarea name="dataWindow" class="form-control" rows="4" cols="50"></textarea>
-   </div>
-</div>
+    </div>
+  </div>
 
 
-<!-- PREVIEW WINDOW-->
-<iframe id="preview" src="preview.html"> </iframe>
-<script src='js/jquery-2.1.4.min.js'></script>
-<script src='js/bootstrap.min.js'></script>
-<script src='js/bootstrap-switch.min.js'></script>
-<script src='js/jquery.serialize-object.min.js'></script>
-<script src="js/editor.js"></script>
+  <!-- PREVIEW WINDOW-->
+  <iframe id="preview" src="preview.html"> </iframe>
+  <script src='js/jquery-2.1.4.min.js'></script>
+  <script src='js/bootstrap.min.js'></script>
+  <script src='js/bootstrap-switch.min.js'></script>
+  <script src='js/jquery.serialize-object.min.js'></script>
+  <script src="js/editor.js"></script>
 
 
 
 
-  </body>
+</body>
+
 </html>

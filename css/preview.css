@@ -397,7 +397,7 @@ text-transform: initial;
 .nameRight-off #nameRight .lower {
   -webkit-transition-delay:.5s;
           transition-delay:.5s;
-  max-height: 0px;
+  max-height: 0px !important;
   top: -125px;
   margin-top:0px;
 }
@@ -767,7 +767,7 @@ Animations! =====*/
   max-height:336px;
 }
 .fullSocial-off #fullBGCard .cardContent{
-  max-height:0px;
+  max-height:0px !important;
   -webkit-transition-delay:.5s;
           transition-delay:.5s;
   -webkit-transition-duration:1s;
@@ -792,6 +792,8 @@ Animations! =====*/
   -webkit-transition-delay:1s;
           transition-delay:1s;
   height:100vh;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 .fullSocial-off  #fullBG{
   height:0vh;
@@ -826,20 +828,21 @@ Animations! =====*/
 }
 
 #scheduleOne {
-  height:0vh;
+  height:100vh;
   background-size: cover;
-  background-image: url("../img/Screen1.png");
-  -webkit-transition: all 1.6s cubic-bezier(0.560, 0.205, 0.355, 1.000);
-  transition: all 1.6s cubic-bezier(0.560, 0.205, 0.355, 1.000);
+  background-image: url("../img/Screen2.png");
+  -webkit-transition: all 1.4s cubic-bezier(0.560, 0.205, 0.355, 1.000);
+  transition: all 1.4s cubic-bezier(0.560, 0.205, 0.355, 1.000);
+  transform: translate3d(0,-120%,0);
 }
 .schedule-on #scheduleOne {
   -webkit-transition-delay:1.4s;
           transition-delay:1.4s;
-  height:100vh;
+  transform: translate3d(0,0%,0);
 }
 .schedule-off #fullBGSchedule{
-  -webkit-transition-delay: .4s;
-          transition-delay: .4s;
+  -webkit-transition-delay: .7s;
+          transition-delay: .7s;
         }
 
 /*Circle Icons for shit =========*/
@@ -887,25 +890,4 @@ Animations! =====*/
 }
 .circle .pipboy {
   content:url("../img/Icon-Pipboy-White.png");
-}
-
-/*Varible Lower Heights for animations ==========*/
-.tCard-on #tCard .lowerSmall
- {
-  max-height: 182px;
-}
-
-.banner-on #banner .lowerSmall
- {
-  max-height: 166px;
-}
-
-.comingUp-on #comingUp .lowerBig
- {
-  max-height: 128px;
-}
-
-.fullSocial-on #fullBG .lowerSmall
- {
-  max-height: 186px;
 }

@@ -1,14 +1,10 @@
-/*try {
-  Typekit.load();
-} catch (e) {} */
-
 /*$(document).on("click", function() {
   document.documentElement.webkitRequestFullscreen();
 })*/
 
 $(document).on("ready", function() {
-  console.log('this is the preview string => '+localStorage.getItem("previewString"));
-  if (localStorage.getItem("previewString") !== null)  {
+  console.log('this is the preview string => ' + localStorage.getItem("previewString"));
+  if (localStorage.getItem("previewString") !== null) {
     $("body").addClass(localStorage.getItem("previewString"));
   }
   var textElements = [
@@ -62,7 +58,8 @@ $(document).on("ready", function() {
     if (localStorage.getItem(value) !== null) {
       if (value === "fullSocialBg") {
         $('#fullBG').css("background-image", 'url("' + localStorage.getItem(value) + '")');
-      } if (value === "cBugSponsorImage") {
+      }
+      if (value === "cBugSponsorImage") {
         $('.cBugSponsorImage').attr('src', localStorage.getItem(value));
         console.log("this is the entered value => " + localStorage.getItem(value));
       } else {
@@ -76,92 +73,49 @@ $(document).on("ready", function() {
     }
   });
 
-  function animationHeight(){
-    if (event.key == "bannerTitle") {
-        var lh = $('#banner .lowerContent').height();
-        var lowerh = lh + 40;
-        if (lowerh < 200){
-          $('#banner .lower').addClass('lowerSmall');
-        } else {
-          $('#banner .lower').removeClass('lowerSmall');
-        }
-
-    };
-    if (event.key == "twitterContent") {
-        var lh = $('#tCard .lowerContent').height();
-        var lowerh = lh + 40;
-        if (lowerh < 200){
-          $('#tCard .lower').addClass('lowerSmall');
-        } else {
-          $('#tCard .lower').removeClass('lowerSmall');
-        }
-
-    };
-    if (event.key == "comingUpTitle") {
-        var lh = $('#comingUp .lowerContent').height();
-        var lowerh = lh + 40;
-        if (lowerh > 100){
-          $('#comingUp .lower').addClass('lowerBig');
-        } else {
-          $('#comingUp .lower').removeClass('lowerBig');
-        }
-
-    };
-    if (event.key == "cardBody") {
-        var lh = $('#fullBG .centerCardBlock').height();
-        var lowerh = lh + 40;
-        console.log(lowerh);
-        if (lowerh < 180){
-          $('#fullBG .cardContent').addClass('lowerSmall');
-        } else {
-          $('#fullBG .cardContent').removeClass('lowerSmall');
-        }
-
-    };
-
+  function bannerHeight() {
+    var lh = $('#banner .lowerContent').height();
+    var lowerh = lh + 40;
+    $('.banner-on #banner .lower').css('max-height', lowerh);
   };
 
-    function animationHeighIni() {
-      function bannerHeight() {
-        var lh = $('#banner .lowerContent').height();
-        var lowerh = lh + 40;
-        if (lowerh < 200){
-          $('#banner .lower').addClass('lowerSmall');
-        } else {
-          $('#banner .lower').removeClass('lowerSmall');
-        }
+  function tCardHeight() {
+    var lh = $('#tCard .lowerContent').height();
+    var lowerh = lh + 40;
+    $('.tCard-on #tCard .lower').css('max-height', lowerh);
+  };
 
-    };
-    function tCardHeight() {
-        var lh = $('#tCard .lowerContent').height();
-        var lowerh = lh + 40;
-        if (lowerh < 200){
-          $('#tCard .lower').addClass('lowerSmall');
-        } else {
-          $('#tCard .lower').removeClass('lowerSmall');
-        }
+  function comingUpHeight() {
+    var lh = $('#comingUp .lowerContent').height();
+    var lowerh = lh + 40;
+    $('.comingUp-on #comingUp .lower').css('max-height', lowerh);
+  };
 
-    };
-    function comingUpHeight() {
-        var lh = $('#comingUp .lowerContent').height();
-        var lowerh = lh + 40;
-        if (lowerh > 100){
-          $('#comingUp .lower').addClass('lowerBig');
-        } else {
-          $('#comingUp .lower').removeClass('lowerBig');
-        }
+  function fullHeight() {
+    var lh = $('#fullBG .centerCardBlock').height();
+    var lowerh = lh + 40;
+    $('.fullSocial-on #fullBGCard .cardContent').css('max-height', lowerh);
+  };
 
+  function animationHeight() {
+    if (event.key == "bannerTitle") {
+      bannerHeight();
     };
-    function fullHeight() {
-        var lh = $('#fullBG .centerCardBlock').height();
-        var lowerh = lh + 40;
-        if (lowerh < 180){
-          $('#fullBG .cardContent').addClass('lowerSmall');
-        } else {
-          $('#fullBG .cardContent').removeClass('lowerSmall');
-        }
 
+    if (event.key == "twitterContent") {
+      tCardHeight();
     };
+
+    if (event.key == "comingUpTitle") {
+      comingUpHeight();
+    };
+
+    if (event.key == "cardBody") {
+      fullHeight();
+    };
+  };
+
+  function animationHeighIni() {
     bannerHeight();
     tCardHeight();
     comingUpHeight();
@@ -178,21 +132,21 @@ $(document).on("ready", function() {
       // }
     }
 
-
     $.each(textElements, function(i, value) {
       if (event.key == value && localStorage.getItem(value) !== null) {
         if (value === "fullSocialBg") {
           $('#fullBG').css("background-image", 'url("' + localStorage.getItem(value) + '")');
           console.log("this is the entered value => " + localStorage.getItem(value));
-        } if (value === "cBugSponsorImage") {
+        }
+        if (value === "cBugSponsorImage") {
           $('.cBugSponsorImage').attr('src', localStorage.getItem(value));
           console.log("this is the entered value => " + localStorage.getItem(value));
-        }
-         else {
+        } else {
           $('#' + value).text(localStorage.getItem(value));
         }
       }
     });
+
     animationHeight();
     $.each(iconTypes, function(i, value) {
       if (event.key == value && localStorage.getItem(value) !== null) {
