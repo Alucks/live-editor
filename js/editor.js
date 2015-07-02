@@ -51,7 +51,8 @@ $(document).on("ready", function() {
       "nameBarNumber",
       "fullSocial",
       "cBugLines",
-      "cBugSponsor"
+      "cBugSponsor",
+      "schedule"
 
    ];
    var textAreas = [

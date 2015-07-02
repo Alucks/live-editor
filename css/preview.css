@@ -816,7 +816,31 @@ Animations! =====*/
           transform: scale(0,0);
 }
 
+/* Schedule =========*/
 
+
+.schedule-on #fullBGSchedule{
+  -webkit-transition-delay:1s;
+          transition-delay:1s;
+  height:100vh;
+}
+
+#scheduleOne {
+  height:0vh;
+  background-size: cover;
+  background-image: url("../img/Screen1.png");
+  -webkit-transition: all 1.6s cubic-bezier(0.560, 0.205, 0.355, 1.000);
+  transition: all 1.6s cubic-bezier(0.560, 0.205, 0.355, 1.000);
+}
+.schedule-on #scheduleOne {
+  -webkit-transition-delay:1.4s;
+          transition-delay:1.4s;
+  height:100vh;
+}
+.schedule-off #fullBGSchedule{
+  -webkit-transition-delay: .4s;
+          transition-delay: .4s;
+        }
 
 /*Circle Icons for shit =========*/
 .circle .twitter {
