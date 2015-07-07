@@ -547,13 +547,17 @@
           <li><a href="#">Microsoft Pre Show</a></li>
         </ul>
       </div>
-      <select name="scheduleNumber" class="form-control">
-        <option value="schedule1">Screen 1</option>
-        <option value="schedule2">Screen 2</option>
-        <option value="schedule3">Screen 3</option>
-        <option value="schedule4">Screen 4</option>
-        <option value="schedule5">Screen 5</option>
-      </select>
+      <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-default btn-sm">
+          <input type="radio" name="dayNumber" id="option1" value="schedule1" autocomplete="off"> Day1
+        </label>
+        <label class="btn btn-default btn-sm">
+          <input type="radio" name="dayNumber" id="option2" value="schedule2" autocomplete="off">Day2
+        </label>
+        <label class="btn btn-default btn-sm">
+          <input type="radio" name="dayNumber" id="option3" value="schedule3" autocomplete="off">Day3
+        </label>
+      </div>
       <button type="button" class="collapseButton btn btn-default btn-sm" data-toggle="collapse" href="#scheduleControl" />Edit Module
       <span class="glyphicon glyphicon-chevron-down"></span>
       </button>

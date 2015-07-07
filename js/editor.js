@@ -42,8 +42,7 @@ $(document).on("ready", function() {
       "scheduleTwo",
       "scheduleThree",
       "scheduleFour",
-      "scheduleFive",
-      "scheduleNumber"
+      "scheduleFive"
    ];
    var elementStates = [
       "cBug",
@@ -189,8 +188,8 @@ $(document).on("ready", function() {
       stateStringBuild();
       $('#pushBtn').addClass('glow');
    });
-   $('select[name=scheduleNumber]').change(function() {
-      var selected = $('select[name=scheduleNumber] option:selected').val();
+   $('input[name=dayNumber]').change(function() {
+      var selected = $(this).val();
       localStorage.setItem('scheduleNumber', selected);
       stateStringBuild();
       $('#pushBtn').addClass('glow');
