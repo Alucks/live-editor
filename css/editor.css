@@ -150,7 +150,7 @@ font-weight:800;
 textarea {
   margin-bottom: 10px;
 }
-#scheduleScreenSelect {
+select[name="scheduleNumber"] {
   width: 100px;
   height: 28px;
   display: inline;

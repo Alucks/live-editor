@@ -37,8 +37,13 @@ $(document).on("ready", function() {
       "cardInfo1",
       "cardInfo2",
       "fullSocialBg",
-      "cBugSponsorImage"
-
+      "cBugSponsorImage",
+      "scheduleOne",
+      "scheduleTwo",
+      "scheduleThree",
+      "scheduleFour",
+      "scheduleFive",
+      "scheduleNumber"
    ];
    var elementStates = [
       "cBug",
@@ -52,7 +57,8 @@ $(document).on("ready", function() {
       "fullSocial",
       "cBugLines",
       "cBugSponsor",
-      "schedule"
+      "schedule",
+      "scheduleNumber"
 
    ];
    var textAreas = [
@@ -61,7 +67,7 @@ $(document).on("ready", function() {
    ];
 
    var iconTypes = [
-  	  "bannerIcon",
+  	"bannerIcon",
      "comingUpIcon",
      "fullSocialIcon",
      "nameLeftIcon",
@@ -176,10 +182,16 @@ $(document).on("ready", function() {
       console.log('clear');
    });
 
-   /*Name Bar Choose # of People ===============*/
+   /* Specific selector options ===============*/
    $('select[name=nameBarNumber]').change(function() {
       var selected = $('select[name=nameBarNumber] option:selected').val();
       localStorage.setItem('nameBarNumber', selected);
+      stateStringBuild();
+      $('#pushBtn').addClass('glow');
+   });
+   $('select[name=scheduleNumber]').change(function() {
+      var selected = $('select[name=scheduleNumber] option:selected').val();
+      localStorage.setItem('scheduleNumber', selected);
       stateStringBuild();
       $('#pushBtn').addClass('glow');
    });
@@ -199,6 +211,7 @@ $(document).on("ready", function() {
 
    /*Load and Save Information ===============*/
    var liveData;
+
 
    function clearData() {
    liveData = {
@@ -220,6 +233,7 @@ $(document).on("ready", function() {
                   'comingUp': [],
                   'twitter': [],
                   'fullSocial': [],
+                  'schedule': [],
                };
    };
    clearData();
@@ -231,6 +245,7 @@ $(document).on("ready", function() {
       };
    };
 
+   // Call takes all of the localStorage data and makes saved lists out of them for the editor to select from
    function Call() {
       $('.dropdown-menu').empty();
       jQuery.each(liveData, function(i, field) {
@@ -261,7 +276,8 @@ $(document).on("ready", function() {
       });
    }
 
-      $(document).on('click', 'li .saver', function(e) {
+  // Selecting a saved state function
+  $(document).on('click', 'li .saver', function(e) {
       console.log(this);
       var $this = $(this);
       var dataVal;
@@ -283,6 +299,7 @@ $(document).on("ready", function() {
       stateStringBuild();
    });
 
+   // Remove a saved state
    $(document).on('click', 'li .remover', function(e) {
       var $this = $(this);
       var $name = $this.data("name");
@@ -295,13 +312,13 @@ $(document).on("ready", function() {
       localStorage.setItem('liveData', JSON.stringify(liveData));
    });
 
+   // Saving a Module State
    $('.saveBtn').on('click', function() {
       var $type = $(this).data("type");
       var $name = $('form#' + $type + 'Form [name="name"]').val();
       liveData[$type] = $.grep(liveData[$type], function(value, i){
          return (value.name !== $name );
       });
-
       liveData[$type].push($('form#' + $type + 'Form').serializeObject());
       localStorage.setItem('liveData', JSON.stringify(liveData));
       console.log(localStorage.getItem('liveData'));
@@ -310,12 +327,14 @@ $(document).on("ready", function() {
       return false;
    });
 
+   // Export the all the current saves and clear the data
    $('#exporter').click(function() {
       $(document.getElementsByName("dataWindow")).val(JSON.stringify(liveData));
       clearData();
       Call();
    });
 
+   // Clear the current data and import all of the data from the dataWindow text area. Clear the text area when finished
    $('#importer').click(function() {
       var dataEntry = $(document.getElementsByName("dataWindow")).val();
       liveData = JSON.parse(dataEntry);

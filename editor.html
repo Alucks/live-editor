@@ -547,12 +547,12 @@
           <li><a href="#">Microsoft Pre Show</a></li>
         </ul>
       </div>
-      <select id="scheduleScreenSelect" class="form-control">
-        <option>Screen 1</option>
-        <option>Screen 2</option>
-        <option>Screen 3</option>
-        <option>Screen 4</option>
-        <option>Screen 5</option>
+      <select name="scheduleNumber" class="form-control">
+        <option value="schedule1">Screen 1</option>
+        <option value="schedule2">Screen 2</option>
+        <option value="schedule3">Screen 3</option>
+        <option value="schedule4">Screen 4</option>
+        <option value="schedule5">Screen 5</option>
       </select>
       <button type="button" class="collapseButton btn btn-default btn-sm" data-toggle="collapse" href="#scheduleControl" />Edit Module
       <span class="glyphicon glyphicon-chevron-down"></span>
@@ -560,9 +560,26 @@
       <div class="collapse" id="scheduleControl">
         <form id="scheduleForm">
           <div class="form-group">
-            <label for="scheduleOne">Schedule Frame One</label>
+            <label for="scheduleOne">Schedule Screen One</label>
             <input type="text" name="scheduleOne" class="form-control" placeholder="img/name.jpg" />
           </div>
+          <div class="form-group">
+            <label for="scheduleTwo">Schedule Screen Two</label>
+            <input type="text" name="scheduleTwo" class="form-control" placeholder="img/name.jpg" />
+          </div>
+          <div class="form-group">
+            <label for="scheduleThree">Schedule Screen Three</label>
+            <input type="text" name="scheduleThree" class="form-control" placeholder="img/name.jpg" />
+          </div>
+          <div class="form-group">
+            <label for="scheduleFour">Schedule Screen Four</label>
+            <input type="text" name="scheduleFour" class="form-control" placeholder="img/name.jpg" />
+          </div>
+          <div class="form-group">
+            <label for="scheduleFive">Schedule Screen Five</label>
+            <input type="text" name="scheduleFive" class="form-control" placeholder="img/name.jpg" />
+          </div>
+          <hr>
           <div class="form-group">
             <label for="scheduleBg">Background Image URL</label>
             <input type="text" name="fullSocialBg" class="form-control" placeholder="img/name.jpg" />

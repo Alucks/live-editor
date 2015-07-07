@@ -24,7 +24,7 @@ body {
 #cBug {
   width: auto;
   max-height: 0px;
-  top: 6vh;
+  top: 60px;
   left: 12vh;
   position: absolute;
   overflow: hidden;
@@ -41,7 +41,7 @@ body {
   min-width: 324px;
   font-weight: 500;
   letter-spacing: 1px;
-  font-size: 1em;
+  font-size: 1.2em;
   line-height: .85em;
   padding: 11px 0px 12px 0px;
   text-transform: uppercase;
@@ -49,7 +49,7 @@ body {
 
 #cBugSponsor {
     max-height: 0px;
-    top: 10.6vh;
+    top: 115px;
     left: 12vh;
     position: absolute;
     overflow: hidden;
@@ -96,7 +96,7 @@ body {
 /*Intro Animation */
 
 .cB-red {
-  top: 6vh;
+  top: 60px;
   width: 10px;
   height: 10px;
   background-color: #bf1313;
@@ -521,10 +521,10 @@ text-transform: initial;
     margin-top: 0px;
   }
   50% {
-    margin-top: -50px;
+    margin-top: -55px;
   }
   98% {
-    margin-top: -50px;
+    margin-top: -55px;
   }
   100% {
     margin-top: 0px;
@@ -538,10 +538,10 @@ text-transform: initial;
     margin-top: 0px;
   }
   50% {
-    margin-top: -50px;
+    margin-top: -55px;
   }
   98% {
-    margin-top: -50px;
+    margin-top: -55px;
   }
   100% {
     margin-top: 0px;
@@ -553,7 +553,7 @@ text-transform: initial;
     max-height: 0px;
   }
   100% {
-    max-height: 50px;
+    max-height: 55px;
   }
 }
 
@@ -562,13 +562,13 @@ text-transform: initial;
     max-height: 0px;
   }
   100% {
-    max-height: 50px;
+    max-height: 55px;
   }
 }
 
 @-webkit-keyframes cBugHide {
   0% {
-    max-height: 50px;
+    max-height: 55px;
     top: 6vh
   }
   100% {
@@ -579,12 +579,12 @@ text-transform: initial;
 
 @keyframes cBugHide {
   0% {
-    max-height: 50px;
-    top: 6vh
+    max-height: 55px;
+    top: 60px;
   }
   100% {
     max-height: 0px;
-    top: 11vh
+    top: 115px;
   }
 }
 
@@ -600,6 +600,7 @@ text-transform: initial;
     left: 12vh;
   }
 }
+
 @keyframes cBug1 {
   0% {
     left: 18vh;
@@ -619,8 +620,8 @@ text-transform: initial;
   75% {
     left: 12vh;
   }
-  100% {
-    width: 120px;
+  90% {
+    width: 354px;
   }
 }
 
@@ -631,18 +632,16 @@ text-transform: initial;
   75% {
     left: 12vh;
   }
-  100% {
-    width: 120px;
+  90% {
+    width: 354px;
   }
 }
-
-
 
 /*== fullBG ==========*/
 .fullBG .circle {
   top:initial;
   left:initial;
-  margin:36px 0 0 -24px;
+  margin:32px 0 0 -24px;
 }
 
 
@@ -666,9 +665,9 @@ text-transform: initial;
 #fullBGCard {
   position: absolute;
   left: 50%;
-  top:280px;
-  margin-left: -390px;
-  width: 780px;
+  top:260px;
+  margin-left: -470px;
+  width: 940px;
   color: #fff;
   z-index: 2;
 
@@ -690,7 +689,7 @@ text-transform: initial;
 }
 
 #fullBG .cardTitle{
-  font-size: 2em;
+  font-size: 1.7em;
   padding: 20px 50px;
   border-bottom:none;
   color: #231f20;
@@ -708,15 +707,15 @@ text-transform: initial;
 
 #cardBody {
   -webkit-font-smoothing: antialiased !important;
-  font-size: 1.3em;
-  margin: 15px 50px 20px 50px;
+  font-size: 1.6em;
+  margin: 25px 50px 30px 50px;
 }
 
 .cardInfo {
   font-family: 'DINRoundCompPro-Bold',sans-serif;
   font-weight: 600;
   font-size: 20px;
-  margin: 0px 4px 20px 0px;
+  margin: 0px 4px 30px 0px;
   text-transform: uppercase;
   letter-spacing: 1px;
   float: left;
@@ -753,7 +752,7 @@ Animations! =====*/
 .fullSocial-on #fullBGCard .centerCard{
   -webkit-transition-delay:2s;
           transition-delay:2s;
-  max-height:160px;
+  max-height:151px;
 }
 .fullSocial-off #fullBGCard .centerCard{
   max-height:0px;
@@ -764,7 +763,7 @@ Animations! =====*/
 .fullSocial-on #fullBGCard .cardContent{
   -webkit-transition-delay:2.4s;
           transition-delay:2.4s;
-  max-height:336px;
+  max-height:380px;
 }
 .fullSocial-off #fullBGCard .cardContent{
   max-height:0px !important;
@@ -819,7 +818,9 @@ Animations! =====*/
 }
 
 /* Schedule =========*/
-
+#fullBGSchedule {
+  overflow: hidden;
+}
 
 .schedule-on #fullBGSchedule{
   -webkit-transition-delay:1s;
@@ -827,22 +828,63 @@ Animations! =====*/
   height:100vh;
 }
 
-#scheduleOne {
-  height:100vh;
+.scheduleScreen {
+  height: 1080px;
+  width: 100vw;
   background-size: cover;
+}
+
+#fullBGSchedule .scheduleView {
+height:0%;
+width: 100vw;
+overflow: hidden;
+/*transform: translate3d(0,-600px,0);*/
+-webkit-transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+        transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+.schedule-on #fullBGSchedule .scheduleView {
+  -webkit-transition-delay:1.2s;
+          transition-delay:1.2s;
+  transform: translate3d(0,0px,0);
+  height: 100%;
+}
+
+
+#schedulePane{
+  margin-top: 0px;
+  height: auto;
+  -webkit-transition: all 1.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+          transition: all 1.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+#fullBGSchedule #scheduleOne,
+#fullBGSchedule #scheduleTwo,
+#fullBGSchedule #scheduleThree,
+#fullBGSchedule #scheduleFour,
+#fullBGSchedule #scheduleFive {
   background-image: url("../img/Screen2.png");
-  -webkit-transition: all 1.4s cubic-bezier(0.560, 0.205, 0.355, 1.000);
-  transition: all 1.4s cubic-bezier(0.560, 0.205, 0.355, 1.000);
-  transform: translate3d(0,-120%,0);
 }
-.schedule-on #scheduleOne {
-  -webkit-transition-delay:1.4s;
-          transition-delay:1.4s;
-  transform: translate3d(0,0%,0);
+.schedule1 #fullBGSchedule #schedulePane {
+  margin-top: 0px;
 }
+.schedule2 #fullBGSchedule #schedulePane {
+  margin-top: -1080px;
+}
+.schedule3 #fullBGSchedule #schedulePane {
+
+  margin-top: -2160px;
+}
+.schedule4 #fullBGSchedule #schedulePane {
+  margin-top: -3240px;
+}
+.schedule5 #fullBGSchedule #schedulePane {
+  margin-top: -4320px;
+}
+
+
 .schedule-off #fullBGSchedule{
-  -webkit-transition-delay: .7s;
-          transition-delay: .7s;
+  -webkit-transition-delay: 600ms;
+          transition-delay: 600ms;
         }
 
 /*Circle Icons for shit =========*/
