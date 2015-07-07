@@ -150,8 +150,7 @@ $(document).on("ready", function() {
         if (value === "fullSocialBg") {
           $('#fullBG').css("background-image", 'url("' + localStorage.getItem(value) + '")');
           console.log("this is the entered value => " + localStorage.getItem(value));
-        }
-        if (value === "cBugSponsorImage") {
+        } if (value === "cBugSponsorImage") {
           $('.cBugSponsorImage').attr('src', localStorage.getItem(value));
           console.log("this is the entered value => " + localStorage.getItem(value));
         } if (scheduleImages.indexOf(value) >= 0) {

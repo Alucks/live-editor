@@ -43,7 +43,14 @@ $(document).on("ready", function() {
     "cardBody",
     "cardInfo1",
     "cardInfo2",
-    "fullSocialBg"
+    "fullSocialBg",
+    "cBugSponsorImage",
+    "scheduleOne",
+    "scheduleTwo",
+    "scheduleThree",
+    "scheduleFour",
+    "scheduleFive",
+    "scheduleNumber"
   ];
   var iconTypes = [
     "bannerIcon",
@@ -55,10 +62,23 @@ $(document).on("ready", function() {
     "tIcon"
   ];
 
+  var scheduleImages = [
+    "scheduleOne",
+    "scheduleTwo",
+    "scheduleThree",
+    "scheduleFour",
+    "scheduleFive"
+  ];
+
   $.each(textElements, function(i, value) {
     if (localStorage.getItem(value) !== null) {
       if (value === "fullSocialBg") {
         $('#fullBG').css("background-image", 'url("' + localStorage.getItem(value) + '")');
+      } if (value === "cBugSponsorImage") {
+        $('.cBugSponsorImage').attr('src', localStorage.getItem(value));
+        console.log("this is the entered value => " + localStorage.getItem(value));
+      } if (scheduleImages.indexOf(value) >= 0) {
+        $('#' + value).css("background-image", 'url("' + localStorage.getItem(value) + '")');
       } else {
         $('#' + value).text(localStorage.getItem(value));
       }
@@ -78,12 +98,17 @@ $(document).on("ready", function() {
       //   var video = document.getElementById('socialVideo')
       //   video.currentTime = 0;
       //   video.load();
-      // } 
+      // }
 
       $.each(textElements, function(i, value) {
          if (localStorage.getItem(value) !== null) {
           if (value === "fullSocialBg") {
             $('#fullBG').css("background-image", 'url("' + localStorage.getItem(value) + '")');
+          } if (value === "cBugSponsorImage") {
+            $('.cBugSponsorImage').attr('src', localStorage.getItem(value));
+            console.log("this is the entered value => " + localStorage.getItem(value));
+          } if (scheduleImages.indexOf(value) >= 0) {
+            $('#' + value).css("background-image", 'url("' + localStorage.getItem(value) + '")');
           } else {
               $('#' + value).text(localStorage.getItem(value));
           }
@@ -101,46 +126,49 @@ $(document).on("ready", function() {
 
   // Cahnge Element Heights Based on content
 
-function animationHeighIni() {
-      function bannerHeight() {
-        var lh = $('#banner .lowerContent').height();
-        var lowerh = lh + 40;
-        if (lowerh < 200){
-          $('#banner .lower').addClass('lowerSmall');
-        } else {
-          $('#banner .lower').removeClass('lowerSmall');
-        }
-    };
-    function tCardHeight() {
-        var lh = $('#tCard .lowerContent').height();
-        var lowerh = lh + 40;
-        if (lowerh < 200){
-          $('#tCard .lower').addClass('lowerSmall');
-        } else {
-          $('#tCard .lower').removeClass('lowerSmall');
-        }
+  function bannerHeight() {
+    var lh = $('#banner .lowerContent').height();
+    var lowerh = lh + 40;
+    $('.banner-on #banner .lower').css('max-height', lowerh);
+  };
 
-    };
-    function comingUpHeight() {
-        var lh = $('#comingUp .lowerContent').height();
-        var lowerh = lh + 40;
-        if (lowerh > 100){
-          $('#comingUp .lower').addClass('lowerBig');
-        } else {
-          $('#comingUp .lower').removeClass('lowerBig');
-        }
+  function tCardHeight() {
+    var lh = $('#tCard .lowerContent').height();
+    var lowerh = lh + 40;
+    $('.tCard-on #tCard .lower').css('max-height', lowerh);
+  };
 
-    };
-    function fullHeight() {
-        var lh = $('#fullBG .centerCardBlock').height();
-        var lowerh = lh + 40;
-        if (lowerh < 180){
-          $('#fullBG .cardContent').addClass('lowerSmall');
-        } else {
-          $('#fullBG .cardContent').removeClass('lowerSmall');
-        }
+  function comingUpHeight() {
+    var lh = $('#comingUp .lowerContent').height();
+    var lowerh = lh + 40;
+    $('.comingUp-on #comingUp .lower').css('max-height', lowerh);
+  };
 
+  function fullHeight() {
+    var lh = $('#fullBG .centerCardBlock').height();
+    var lowerh = lh + 115;
+    $('.fullSocial-on #fullBGCard .cardContent').css('max-height', lowerh);
+  };
+
+  function animationHeight() {
+    if (event.key == "bannerTitle") {
+      bannerHeight();
     };
+
+    if (event.key == "twitterContent") {
+      tCardHeight();
+    };
+
+    if (event.key == "comingUpTitle") {
+      comingUpHeight();
+    };
+
+    if (event.key == "cardBody") {
+      fullHeight();
+    };
+  };
+
+  function animationHeighIni() {
     bannerHeight();
     tCardHeight();
     comingUpHeight();
