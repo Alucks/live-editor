@@ -819,6 +819,8 @@ Animations! =====*/
 
 /* Schedule =========*/
 #fullBGSchedule {
+  background-image: initial;
+  background: #b7160e;
   overflow: hidden;
 }
 
@@ -835,18 +837,24 @@ Animations! =====*/
 }
 
 #fullBGSchedule .scheduleView {
-height:0%;
+height:100%;
 width: 100vw;
+opacity: 0;
 overflow: hidden;
-/*transform: translate3d(0,-600px,0);*/
--webkit-transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1.000);
-        transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+transform: translate3d(0,400px,0);
+-webkit-transition: all 1.4s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+        transition: all 1.4s cubic-bezier(0.645, 0.045, 0.355, 1.000);
 }
 .schedule-on #fullBGSchedule .scheduleView {
   -webkit-transition-delay:1.2s;
           transition-delay:1.2s;
+  opacity: 1;
   transform: translate3d(0,0px,0);
   height: 100%;
+}
+.schedule-off #fullBGSchedule .scheduleView {
+  -webkit-transition-delay:1.2s;
+          transition-delay:1.2s;
 }
 
 
