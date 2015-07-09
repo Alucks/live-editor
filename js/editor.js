@@ -101,7 +101,7 @@ $(document).on("ready", function() {
       }
    });
 
-   $.each(elementStates, function(i, value) {
+   $.each(modules, function(i, value) {
       if (localStorage.getItem(value) == this + "-on") {
          $('#' + this).bootstrapSwitch('state', true, true);
       }
@@ -151,6 +151,8 @@ $(document).on("ready", function() {
       stateString = " ";
       $.each(elementStates, function(i, value) {
         if(modules.indexOf(value) >= 0){
+          $('#' + value).bootstrapSwitch('state', false, false);
+          localStorage.setItem(value, value + "-off");
           stateString = stateString.concat(value + "-off ");
         } else {
           stateString = stateString.concat(localStorage.getItem(value) + " ");
