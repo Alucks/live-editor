@@ -58,8 +58,20 @@ $(document).on("ready", function() {
       "cBugSponsor",
       "schedule",
       "scheduleNumber"
-
    ];
+   var modules = [
+     "cBug",
+     "banner",
+     "comingUp",
+     "tCard",
+     "nameLeft",
+     "nameRight",
+     "nameBar",
+     "fullSocial",
+     "cBugSponsor",
+     "schedule",
+   ]
+
    var textAreas = [
       "cardBody",
       "twitterContent"
@@ -135,6 +147,18 @@ $(document).on("ready", function() {
       localStorage.setItem('previewString', stateString);
    };
 
+   function stateStringClear() {
+      stateString = " ";
+      $.each(elementStates, function(i, value) {
+        if(modules.indexOf(value) >= 0){
+          stateString = stateString.concat(value + "-off ");
+        } else {
+          stateString = stateString.concat(localStorage.getItem(value) + " ");
+        }
+      });
+      localStorage.setItem('previewString', stateString);
+   };
+
    $(document).keypress(function (e) {
     if (e.which == 13) {
       str_count = localStorage.getItem('updateString');
@@ -168,8 +192,8 @@ $(document).on("ready", function() {
    });
 
    $("#clearBtn").click(function() {
-      localStorage.setItem('previewString', ' ');
-      localStorage.setItem('pushString', ' ');
+      stateStringClear();
+      localStorage.setItem('pushString', localStorage.getItem("previewString"));
       str_count = localStorage.getItem('updateString');
       if (str_count == null || str_count == "null"){
       count = 0;

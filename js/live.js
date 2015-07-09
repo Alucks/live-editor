@@ -119,7 +119,7 @@ $(document).on("ready", function() {
           $('#' + value + ' img').attr("class", "iconWhite " + localStorage.getItem(value));
         }
       });
-      animationHeighIni();
+      animationHeightIni();
     }
 
   });
@@ -168,12 +168,12 @@ $(document).on("ready", function() {
     };
   };
 
-  function animationHeighIni() {
+  function animationHeightIni() {
     bannerHeight();
     tCardHeight();
     comingUpHeight();
     fullHeight();
   };
-  animationHeighIni();
+  animationHeightIni();
 
 });

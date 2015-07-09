@@ -128,7 +128,7 @@ $(document).on("ready", function() {
     };
   };
 
-  function animationHeighIni() {
+  function animationHeightIni() {
     bannerHeight();
     tCardHeight();
     comingUpHeight();
@@ -138,6 +138,7 @@ $(document).on("ready", function() {
   window.addEventListener('storage', function(event) {
     if (event.key == "previewString") {
       $("body")[0].className = localStorage.getItem("previewString");
+      animationHeightIni();
       // if (event.key == "previewString" && $("body").hasClass("fullSocial-on")) {
       //   var video = document.getElementById('socialVideo')
       //   video.currentTime = 0;
@@ -157,11 +158,12 @@ $(document).on("ready", function() {
           $('#' + value).css("background-image", 'url("' + localStorage.getItem(value) + '")');
         } else {
           $('#' + value).text(localStorage.getItem(value));
+          animationHeightIni();
         }
       }
     });
 
-    animationHeight();
+
     $.each(iconTypes, function(i, value) {
       if (event.key == value && localStorage.getItem(value) !== null) {
         $('#' + value + ' img').attr("class", "iconWhite " + localStorage.getItem(value));
@@ -169,5 +171,5 @@ $(document).on("ready", function() {
       };
     });
   });
-  animationHeighIni();
+  animationHeightIni();
 });
