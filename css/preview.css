@@ -94,7 +94,8 @@ body {
           animation-fill-mode:forwards;
 }
 
-.cBug-off #cBug {
+.cBug-off #cBug,
+.cBugSponsor-on #cBug {
 /*  transition: top .8s;
   top:8vh;
   max-height: 0px;*/
