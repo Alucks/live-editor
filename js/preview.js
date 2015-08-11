@@ -88,19 +88,19 @@ $(document).on("ready", function() {
 
   function bannerHeight() {
     var lh = $('#banner .lowerContent').height();
-    var lowerh = lh + 40;
+    var lowerh = lh + 56;
     $('.banner-on #banner .lower').css('max-height', lowerh);
   };
 
   function tCardHeight() {
     var lh = $('#tCard .lowerContent').height();
-    var lowerh = lh + 40;
+    var lowerh = lh + 56;
     $('.tCard-on #tCard .lower').css('max-height', lowerh);
   };
 
   function comingUpHeight() {
     var lh = $('#comingUp .lowerContent').height();
-    var lowerh = lh + 40;
+    var lowerh = lh + 60;
     $('.comingUp-on #comingUp .lower').css('max-height', lowerh);
   };
 

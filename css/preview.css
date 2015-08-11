@@ -3,11 +3,12 @@
 html,
 body {
   margin: 0;
-  font-family: ars maquette;
+  font-family: Gotham;
   font-size: 32px;
-  background: #3BC33B;
+  background: ##0303FF;
   overflow: hidden;
-  color: #231f20;
+  color: white;
+  text-align: center;
   /*  cursor: none;*/
   /*background-image: url('../img/asafe.jpg')*/
 }
@@ -151,27 +152,27 @@ body {
 /*== Lower Thirds Base Styles ==========*/
 
 .lower {
+  -webkit-transform: skewX(-9deg);-ms-transform: skewX(-9deg);transform: skewX(-9deg);
+  text-align: left;
   margin-top: 0px;
   box-sizing: border-box;
-  font-size: 1em;
-  line-height: 1.2em;
-  background: white;
+  background: #79b2a1;
   display: inline-block;
   overflow: hidden;
   display: block;
   z-index: 99;
   max-height: 0px;
   top: -125px;
-  -webkit-transition: all .8s cubic-bezier(0.560, 0.205, 0.355, 1.000);
-          transition: all .8s cubic-bezier(0.560, 0.205, 0.355, 1.000);
+  -webkit-transition: all .8s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+          transition: all .8s cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
 .lowerContent {
-  padding: 17px 50px 23px 50px;
-  -webkit-transform: translate3d(0, 100%, 0);
-          transform: translate3d(0, 100%, 0);
-  -webkit-transition: all .8s cubic-bezier(0.560, 0.205, 0.355, 1.000);
-          transition: all .8s cubic-bezier(0.560, 0.205, 0.355, 1.000);
+  padding: 30px 40px;
+  -webkit-transform: translate3d(0, 100%, 0) skewX(9deg);
+          transform: translate3d(0, 100%, 0) skewX(9deg);
+  -webkit-transition: all .8s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+          transition: all .8s cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
 #tCard .lowerContent,
@@ -181,49 +182,26 @@ body {
 }
 
 .lowerTitle {
-  line-height: 1em;
-  font-size: 1.4em;
+  color: white;
+  line-height: 1.1em;
+  font-size: 1.2em;
   font-weight: 900;
   text-transform: uppercase;
-}
-
-.circle {
-  border-radius: 50%;
-  height: 48px;
-  width: 48px;
-  left: -24px;
-  top: 64px;
-  background-color: #bf1313;
-  position: absolute;
-  z-index: 4;
-  text-align: center;
-  color: white;
-  font-size: 1em;
-  font-weight: 900;
-  line-height: 1.5em;
-  -webkit-transform: scale(0,0);
-      -ms-transform: scale(0,0);
-          transform: scale(0,0);
-  -webkit-font-smoothing: antialiased;
+  font-style: italic;
 }
 
 .infoBar {
-  /*font-family: 'DINRoundCompPro-Bold',sans-serif;*/
+  width: 530px;
+  height: 70px;
   display: inline-block;
-  color: #fff;
-  -webkit-font-smoothing: antialiased;
-  letter-spacing: 1px;
-  font-weight: 600;
-  font-size: .8em;
-  background-color: #bf1313;
-  text-transform: uppercase;
-  width: auto;
+  background-color: #fb8c2a;
   overflow: hidden;
   z-index: 0;
   position: relative;
-  bottom:-6px;
+  bottom:-55px;
   max-height: 0px;
-  -webkit-transition: all .7s cubic-bezier(0.560, 0.205, 0.355, 1.000);
+  -webkit-transition: all .8s cubic-bezier(0.560, 0.205, 0.355, 1.000);
+  -webkit-transform: skewX(20deg) rotate(0deg);-ms-transform: skewX(20deg) rotate(0deg);transform: skewX(20deg) rotate(0deg);
 }
 .infoBarContent {
    padding: 4px 50px 7px 50px;
@@ -232,9 +210,7 @@ body {
  }
 
 /*== Twitter Card Styles ==========*/
-#tCard {
-  max-width: 800px !important;
-}
+
 
 .cardTitle {
   font-size: 1.4em;
@@ -250,7 +226,7 @@ body {
 
 #twitterContent {
   padding-bottom: 10px;
-  -webkit-font-smoothing: antialiased !important;
+  font-style: italic;
 }
 
 #tCard .lower,
@@ -287,30 +263,40 @@ body {
 }
 
 /*== Name Bar Styles ==========*/
+.nameBar4 #nameBar .infoBar,
+.nameBar3 #nameBar .infoBar {
+  width: 800px;
+  bottom: -57px;
+  left: 100px;
+  max-height: 80px;
+}
+
 #nameBar {
   text-align: center;
   position:absolute;
   max-width: 95%;
+  min-width: 35%;
   bottom: 8vh;
   left:50%;
-  -webkit-transform: translate(-50%);
-      -ms-transform: translate(-50%);
-          transform: translate(-50%);
+  -webkit-transform: translate(-50%) rotate(-3deg);
+      -ms-transform: translate(-50%) rotate(-3deg);
+          transform: translate(-50%) rotate(-3deg);
   display: table;
 }
 #nameBar .lower {
-  font-size:.8em;
+  /*font-size:.8em;*/
 }
 #nameBar .lowerContent {
   padding: 30px 30px;
+  text-align: center;
 }
 
-#nameBar .lowerTitle{
+#nameBar .lowerTitle {
 line-height: 1.2em;
 font-weight: 600;
 margin-top:-10px;
 padding-bottom: 5px;
-text-transform: initial;
+text-transform: uppercase;
 }
 
 .nameBar1 #nBarPerson2,
@@ -341,22 +327,25 @@ text-transform: initial;
 
 .nBarPerson {
   display: inline-block;
-  border-left: 2px solid;
   line-height: 20px;
   padding: 0px 18px;
 }
 
 #banner,
 #comingUp,
-#nameLeft
- {
+#nameLeft {
+  -webkit-transform: rotate(-3deg);-ms-transform: rotate(-3deg);transform: rotate(-3deg);
   max-width: 50%;
+      min-width: 30%;
   bottom: 8vh;
   left: 12vh;
   position: absolute;
 }
 #tCard {
-  max-width: 40%;
+    -webkit-transform: rotate(-3deg);-ms-transform: rotate(-3deg);transform: rotate(-3deg);
+  min-width: 40%;
+  max-width: 800px !important;
+
   bottom: 8vh;
   left: 12vh;
   position: absolute;
@@ -399,8 +388,8 @@ transition: max-height 1s cubic-bezier(0.560, 0.205, 0.355, 1.000);
 .banner-on #banner .lower{
     -webkit-transition-delay:1s;
             transition-delay:1s;
-    -webkit-transition-duration:1.1s;
-            transition-duration:1.1s;
+    -webkit-transition-duration:.6s;
+            transition-duration:.6s;
     max-height: 254px;
     top: 0px;
 }
@@ -417,72 +406,39 @@ transition: max-height 1s cubic-bezier(0.560, 0.205, 0.355, 1.000);
 .comingUp-off #comingUp .lower,
 .tCard-off #tCard .lower,
 .nameLeft-off #nameLeft .lower,
-.nameRight-off #nameRight .lower {
-  -webkit-transition-delay:.5s;
-          transition-delay:.5s;
+.nameRight-off #nameRight .lower,
+.nameBar-off #nameBar .lower {
+  -webkit-transition-delay:.3s;
+          transition-delay:.3s;
   max-height: 0px !important;
   top: -125px;
   margin-top:0px;
-}
-.nameBar-off #nameBar .lower{
-  max-height: 0px;
-  top: -125px;
 }
 
 .banner-on #banner .infoBar,
 .comingUp-on #comingUp .infoBar,
 .tCard-on #tCard .infoBar,
 .nameBar-on #nameBar .infoBar{
-  -webkit-transition-delay:1.2s;
-          transition-delay:1.2s;
-  -webkit-transition-duration: .6s;
-          transition-duration: .6s;
-  max-height: 40px;
+  -webkit-transition-delay:1.33s;
+          transition-delay:1.33s;
+  -webkit-transition-duration: .7s;
+          transition-duration: .7s;
+  max-height: 70px;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+          transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  -webkit-transform: skewX(20deg) rotate(7deg);-ms-transform: skewX(20deg) rotate(7deg);
+          transform: skewX(20deg) rotate(7deg);
 }
 
 .banner-off #banner .infoBar,
 .comingUp-off #comingUp .infoBar,
-.tCard-off #tCard .infoBar{
- -webkit-transition-delay: .4s;
-         transition-delay: .4s;
- -webkit-transition-duration: .6s;
-         transition-duration: .6s;
+.tCard-off #tCard .infoBar,
+.nameBar-off #nameBar .infoBar {
+ -webkit-transition-delay:.27s;
+         transition-delay:.27s;
+ -webkit-transition-duration: .54s;
+         transition-duration: .54s;
  max-height: 0px;
-
-}
-
-.nameBar-off #nameBar .infoBar{
- -webkit-transition-delay: .1s;
-         transition-delay: .1s;
- -webkit-transition-duration: .6s;
-         transition-duration: .6s;
- max-height: 0px;
-}
-
-.banner-on #banner .circle,
-.comingUp-on #comingUp .circle,
-.tCard-on #tCard .circle,
-.nameLeft-on #nameLeft .circle,
-.nameRight-on #nameRight .circle {
-  -webkit-transition: all .6s cubic-bezier(0.465, 1.650, 0.610, 0.820);
-          transition: all .6s cubic-bezier(0.465, 1.650, 0.610, 0.820);
-  -webkit-transform: scale(1,1);
-      -ms-transform: scale(1,1);
-          transform: scale(1,1);
-  -webkit-transition-delay: 1.8s;
-          transition-delay: 1.8s;
-}
-
-.banner-off #banner .circle,
-.comingUp-off #comingUp .circle,
-.tCard-off #tCard .circle,
-.nameLeft-off #nameLeft .circle,
-.nameRight-off #nameRight .circle {
-  -webkit-transition: all .6s cubic-bezier(0.215, 0.215, 0.530, -0.600);
-          transition: all .6s cubic-bezier(0.215, 0.215, 0.530, -0.600);
-  -webkit-transform: scale(0,0);
-      -ms-transform: scale(0,0);
-          transform: scale(0,0);
 }
 
 
@@ -491,12 +447,13 @@ transition: max-height 1s cubic-bezier(0.560, 0.205, 0.355, 1.000);
 .nameLeft-on #nameLeft .lowerContent,
 .nameRight-on #nameRight .lowerContent,
 .tCard-on #tCard .lowerContent {
-  -webkit-transform: translate3d(0, 0%, 0);
-          transform: translate3d(0, 0%, 0);
-  -webkit-transition-delay: 1.1s;
-          transition-delay: 1.1s;
+  -webkit-transform: translate3d(0, 0%, 0) skewX(9deg);
+          transform: translate3d(0, 0%, 0) skewX(9deg);
+  -webkit-transition-delay: 1.2s;
+          transition-delay: 1.2s;
 }
-.banner-on #banner .lowerContent,
+
+
 .tCard-on #tCard .lowerContent {
   -webkit-transition-duration: 1.2s;
           transition-duration: 1.2s;
@@ -509,28 +466,28 @@ transition: max-height 1s cubic-bezier(0.560, 0.205, 0.355, 1.000);
 .tCard-off #tCard .lowerContent,
 .nameLeft-off #nameLeft .lowerContent,
 .nameRight-off #nameRight .lowerContent {
-  -webkit-transform: translate3d(0, 100%, 0);
-          transform: translate3d(0, 100%, 0);
-  -webkit-transition: all .8s cubic-bezier(0.560, 0.205, 0.355, 1.000) .4s;
-          transition: all .8s cubic-bezier(0.560, 0.205, 0.355, 1.000) .4s;
+  -webkit-transform: translate3d(0, 100%, 0) skewX(9deg);
+          transform: translate3d(0, 100%, 0) skewX(9deg);
+  -webkit-transition: all .6s cubic-bezier(0.560, 0.205, 0.355, 1.000);
+          transition: all .6s cubic-bezier(0.560, 0.205, 0.355, 1.000);
 }
 
 .banner-off #banner .lowerContent,
 .tCard-off #tCard .lowerContent {
-   -webkit-transition-duration: 1.2s;
-           transition-duration: 1.2s;
+   -webkit-transition-duration: .8s;
+           transition-duration: .8s;
 }
-
 
 .nameBar-on #nameBar .lowerContent {
-  -webkit-transform: translate3d(0, 0%, 0);
-          transform: translate3d(0, 0%, 0);
-  -webkit-transition-delay: 1s;
-          transition-delay: 1s;
+  -webkit-transform: translate3d(0, 0%, 0) skewX(9deg);
+          transform: translate3d(0, 0%, 0) skewX(9deg);
+  -webkit-transition-delay: 1.2s;
+          transition-delay: 1.2s;
 }
+
 .nameBar-off #nameBar .lowerContent {
-  -webkit-transform: translate3d(0, 100%, 0);
-          transform: translate3d(0, 100%, 0);
+  -webkit-transform: translate3d(0, 100%, 0) skewX(9deg);
+          transform: translate3d(0, 100%, 0) skewX(9deg);
 }
 
 /* Animations =========== */
@@ -671,7 +628,6 @@ transition: max-height 1s cubic-bezier(0.560, 0.205, 0.355, 1.000);
 .fullBG {
   background: #3BC33B;
   bottom:0;
-/*  position:absolute;*/
   height: 0vh;
   width: 100vw;
   background-size: cover;
@@ -864,7 +820,8 @@ height:100%;
 width: 100vw;
 opacity: 0;
 overflow: hidden;
-transform: translate3d(0,400px,0);
+-webkit-transform: translate3d(0,400px,0);
+        transform: translate3d(0,400px,0);
 -webkit-transition: all 1.4s cubic-bezier(0.645, 0.045, 0.355, 1.000);
         transition: all 1.4s cubic-bezier(0.645, 0.045, 0.355, 1.000);
 }
@@ -872,7 +829,8 @@ transform: translate3d(0,400px,0);
   -webkit-transition-delay:1.2s;
           transition-delay:1.2s;
   opacity: 1;
-  transform: translate3d(0,0px,0);
+  -webkit-transform: translate3d(0,0px,0);
+          transform: translate3d(0,0px,0);
   height: 100%;
 }
 .schedule-off #fullBGSchedule .scheduleView {
