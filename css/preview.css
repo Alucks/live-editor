@@ -180,7 +180,7 @@ body {
 #tCard .lowerContent,
 #nameRight .lowerContent,
 #nameLeft .lowerContent {
-  padding: 20px 50px;
+  padding: 30px 50px;
 }
 
 .lowerTitle {
@@ -194,13 +194,13 @@ body {
 
 .infoBar {
   width: 480px;
-  height: 60px;
+  height: 40px;
   display: inline-block;
   background-color: #fb8c2a;
   overflow: hidden;
   z-index: 0;
   position: relative;
-  bottom:-40px;
+  bottom:-32px;
   max-height: 0px;
   -webkit-transition: all .8s cubic-bezier(0.560, 0.205, 0.355, 1.000);
   -webkit-transform: skewX(20deg) rotate(0deg);-ms-transform: skewX(20deg) rotate(0deg);transform: skewX(20deg) rotate(0deg);
@@ -265,14 +265,20 @@ body {
 }
 
 /*== Name Bar Styles ==========*/
-.nameBar4.nameBar-on #nameBar .infoBar,
 .nameBar3.nameBar-on #nameBar .infoBar {
   width: 800px;
-  bottom: -60px;
-  left: 100px;
-  max-height: 80px;
-  height: 80px;
+  bottom: -45px;
+  max-height: 50px;
+  height: 50px;
 }
+.nameBar4.nameBar-on #nameBar .infoBar {
+  width: 800px;
+  left: 50px;
+  bottom: -38px;
+  max-height: 50px;
+  height: 50px;
+}
+
 
 #nameBar {
   text-align: center;
@@ -572,11 +578,11 @@ transition: max-height 1s cubic-bezier(0.560, 0.205, 0.355, 1.000);
           transition-delay:1.5s;
   -webkit-transition-duration: .6s;
           transition-duration: .6s;
-          max-height: 60px;
+          max-height: 40px;
           -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
                   transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-          -webkit-transform: skewX(20deg) rotate(7deg);-ms-transform: skewX(20deg) rotate(7deg);
-                  transform: skewX(20deg) rotate(7deg);
+          -webkit-transform: skewX(20deg) rotate(4deg);-ms-transform: skewX(20deg) rotate(4deg);
+                  transform: skewX(20deg) rotate(4deg);
 }
 
 .banner-off #banner .infoBar,
