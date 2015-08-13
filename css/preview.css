@@ -9,6 +9,7 @@ body {
   overflow: hidden;
   color: white;
   text-align: center;
+  font-style: italic;
   /*  cursor: none;*/
   /*background-image: url('../img/asafe.jpg')*/
 }
@@ -153,14 +154,14 @@ body {
 
 .lower {
   -webkit-transform: skewX(-14.9deg);-ms-transform: skewX(-14.9deg);transform: skewX(-14.9deg);
+  overflow: hidden;
+  display: block;
   text-align: left;
   margin-top: 0px;
   box-sizing: border-box;
   background: #79b2a1;
   border-bottom: 0px solid #79b2a1;
-  display: inline-block;
-  overflow: hidden;
-  display: block;
+  box-shadow: 0px 0px 14px rgb(99, 99, 99);
   z-index: 99;
   max-height: 0px;
   top: -125px;
@@ -200,8 +201,9 @@ body {
   overflow: hidden;
   z-index: 0;
   position: relative;
-  bottom:-32px;
+  bottom:-35px;
   max-height: 0px;
+  box-shadow: -1px -2px 3px rgba(251,140,40,1);
   -webkit-transition: all .8s cubic-bezier(0.560, 0.205, 0.355, 1.000);
   -webkit-transform: skewX(20deg) rotate(0deg);-ms-transform: skewX(20deg) rotate(0deg);transform: skewX(20deg) rotate(0deg);
 }
@@ -285,7 +287,7 @@ body {
   position:absolute;
   max-width: 95%;
   min-width: 35%;
-  bottom: 8vh;
+  bottom: 10vh;
   left:50%;
   -webkit-transform: translate(-50%) rotate(-3deg);
       -ms-transform: translate(-50%) rotate(-3deg);
@@ -303,13 +305,13 @@ body {
   text-align: center;
   font-size: .9em;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 #nameBar .lowerTitle {
   font-size: 1.3rem;
   line-height: 1.2em;
-  font-weight: 600;
+  font-weight: 700;
   margin-top:-10px;
   padding-bottom: 5px;
   text-transform: uppercase;
