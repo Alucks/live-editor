@@ -354,7 +354,7 @@ body {
 #nameLeft {
   -webkit-transform: rotate(-3deg);-ms-transform: rotate(-3deg);transform: rotate(-3deg);
   max-width: 50%;
-      min-width: 30%;
+      min-width: 20%;
   bottom: 8vh;
   left: 12vh;
   position: absolute;
@@ -1071,7 +1071,7 @@ overflow: hidden;
           transition-delay: 600ms;
         }
 
-/*Circle Icons for shit =========*/
+/*Circle Icons for shit =========
 .circle .twitter {
   content:url("../img/Icon-Twitter-White.png");
 }
@@ -1116,4 +1116,10 @@ overflow: hidden;
 }
 .circle .pipboy {
   content:url("../img/Icon-Pipboy-White.png");
+}
+*/
+
+.bannerSmall #banner .infoBar{
+  width: 270px;
+  bottom: -42px;
 }

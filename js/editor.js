@@ -42,7 +42,8 @@ $(document).on("ready", function() {
       "scheduleTwo",
       "scheduleThree",
       "scheduleFour",
-      "scheduleFive"
+      "scheduleFive",
+      "bannerWidth"
    ];
    var elementStates = [
       "cBug",
