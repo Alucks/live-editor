@@ -97,7 +97,7 @@ $(document).on("ready", function() {
     //sets small class if there is fewer than 18 character
     var str = localStorage.getItem('bannerTitle');
     var n = str.length;
-    if (n < 20) {
+    if (n < 22) {
       $('body').addClass('bannerSmall');
     } else {
       $('body').removeClass('bannerSmall');
