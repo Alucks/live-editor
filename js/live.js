@@ -50,7 +50,8 @@ $(document).on("ready", function() {
     "scheduleThree",
     "scheduleFour",
     "scheduleFive",
-    "scheduleNumber"
+    "scheduleNumber",
+    "bannerWidth"
   ];
   var iconTypes = [
     "bannerIcon",
@@ -124,9 +125,27 @@ $(document).on("ready", function() {
 
   });
 
-  // Cahnge Element Heights Based on content
-
+  //User set banner max width function
+  function bannerWidth() {
+    if (localStorage.getItem('bannerWidth') != null){
+      var bW = localStorage.getItem('bannerWidth');
+      $('#banner').css('max-width', bW);
+      var lh = $('#banner .lowerContent').height();
+      var lowerh = lh + 56;
+      $('.banner-on #banner .lower').css('max-height', lowerh);
+    }
+  };
+  // Change element heights based on content
   function bannerHeight() {
+    //sets small class if there is fewer than 18 character
+    var str = localStorage.getItem('bannerTitle');
+    var n = str.length;
+    if (n < 20) {
+      $('body').addClass('bannerSmall');
+    } else {
+      $('body').removeClass('bannerSmall');
+    }
+    // Sets height
     var lh = $('#banner .lowerContent').height();
     var lowerh = lh + 56;
     $('.banner-on #banner .lower').css('max-height', lowerh);
@@ -173,6 +192,7 @@ $(document).on("ready", function() {
     tCardHeight();
     comingUpHeight();
     fullHeight();
+    bannerWidth();
   };
   animationHeightIni();
 

@@ -1120,6 +1120,6 @@ overflow: hidden;
 */
 
 .bannerSmall #banner .infoBar{
-  width: 270px;
-  bottom: -42px;
+  max-width: 300px;
+  bottom: -41px;
 }

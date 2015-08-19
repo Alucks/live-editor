@@ -1,7 +1,3 @@
-/*$(document).on("click", function() {
-  document.documentElement.webkitRequestFullscreen();
-})*/
-
 $(document).on("ready", function() {
   console.log('this is the preview string => ' + localStorage.getItem("previewString"));
   if (localStorage.getItem("previewString") !== null) {
@@ -98,14 +94,15 @@ $(document).on("ready", function() {
   };
 
   function bannerHeight() {
+    //sets small class if there is fewer than 18 character
     var str = localStorage.getItem('bannerTitle');
     var n = str.length;
-    if (n < 18) {
+    if (n < 20) {
       $('body').addClass('bannerSmall');
     } else {
       $('body').removeClass('bannerSmall');
     }
-    
+    // Sets height
     var lh = $('#banner .lowerContent').height();
     var lowerh = lh + 56;
     $('.banner-on #banner .lower').css('max-height', lowerh);
