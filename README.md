@@ -26,14 +26,14 @@ Ensure that your second screen does not have a menu bar when the window is fulls
 Download the following GitHub Code: https://github.com/Alucks/live-editor  with ‘Download Zip’ button.
 Extract the zip file and place the live-editor-master folder in your documents folder.
 Open Terminal and  run the following 2 commands:
-1. > cd documents/live-editor-master     
-2. > python -m SimpleHTTPServer 8080
-3. Install the two fonts available here: https://drive.google.com/a/ziffdavis.com/folderview?id=0B7htGoGow2ZcbXpYWm91Y2w0Xzg&usp=sharing
-4. Open http://localhost:8080/editor.html in chrome on your main display.
-5. Open http://localhost:8080/live.html in chrome on your secondary 1080p display. Double Click on the Browser to enter a full screen display.
-6. Controlling The Graphics
-7. Push Live Button: Take the current preview display and push it to the live view.
-8. Clear Button: Remove all graphics from preview and the live view.
+  1. > cd documents/live-editor-master     
+  2. > python -m SimpleHTTPServer 8080
+  3. Install the two fonts available here: https://drive.google.com/a/ziffdavis.com/folderview?id=0B7htGoGow2ZcbXpYWm91Y2w0Xzg&usp=sharing
+  4. Open http://localhost:8080/editor.html in chrome on your main display.
+  5. Open http://localhost:8080/live.html in chrome on your secondary 1080p display. Double Click on the Browser to enter a full screen display.
+  6. Controlling The Graphics
+  7. Push Live Button: Take the current preview display and push it to the live view.
+  8. Clear Button: Remove all graphics from preview and the live view.
 
 Editing Live Modules When you make text changes or icon changes to a module that is currently live, and press ‘push live’ again the module will immediately update. You can use this to make correction on currently live graphics without taking them down.
 
