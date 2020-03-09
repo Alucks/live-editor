@@ -1,9 +1,9 @@
-#IGN Live Graphics Editor
+# IGN Live Graphics Editor
 
 The new Live Graphics Editor allows for quick editing of graphics for life events, provides animations entrance and exit animations and allows the import of spreadsheet data. All of these features combined provide a streamlined workflow to produce high quality graphics with minimal effort.
 
 
-###Spreadsheet guide
+### Spreadsheet guide
 Never include double or single quotes in the spreadsheet.
 Columns Marked Yellow  only accept specially formatted entries. Icons can only accept the outlined icon values listed in the available icons chart. The Full Social Background image only can have links to image assets.
 
@@ -14,7 +14,7 @@ Once your spreadsheet data is ready to be placed in the live editor press the �
 If you are not seeing the Export JSON button refer to this guide to add it to a spreadsheet.
 http://blog.pamelafox.org/2013/06/exporting-google-spreadsheet-as-json.html
 
-###Local Machine Setup
+### Local Machine Setup
 Below you will find the instructions for getting your machine ready to run the IGN Live Graphics Editor. While a machine is being used for a live stream, no other applications Chrome and a note app should be used to insure minimal notifications. A second display that is 1080p is required to render the live output on.
 System Setup
 Ensure that your second screen does not have a menu bar when the window is fullscreened.
@@ -22,7 +22,7 @@ Ensure that your second screen does not have a menu bar when the window is fulls
   2. Uncheck ‘Displays have separate Spaces’
   3. Logout of your mac and back in for the change to take effect.
 
-###Editor Setup
+### Editor Setup
 Download the following GitHub Code: https://github.com/Alucks/live-editor  with ‘Download Zip’ button.
 Extract the zip file and place the live-editor-master folder in your documents folder.
 Open Terminal and  run the following 2 commands:
